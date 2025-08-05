@@ -868,6 +868,7 @@
   // Global variables for user state
   let currentUserRole = null; // 'admin' or 'employee'
   let currentEmployeeId = null; // The ID of the logged-in employee
+  let pendingCheckInRecord = null; // NEW: To store check-in data before visit logging
 
   // Define allowed admin usernames and their common password
   const adminCommonPassword = "scube@1234"; // Common password for all admins
@@ -1115,7 +1116,7 @@
                     name: foundAdminData ? foundAdminData.name : adminUsernameInput.replace('ADM-', ''),
                     mobileNo: foundAdminData ? foundAdminData.mobileNo : 'N/A', // Get mobile from initial data
                     emailId: 'N/A',
-                    password: 'scube@1234' // Use the common admin password
+                    password: adminCommonPassword // Use the common admin password
                 };
                 await saveUserProfile(newAdminProfile); // Save to Supabase
                 Object.assign(adminProfile, newAdminProfile); // Update local adminProfile for immediate use
@@ -1476,6 +1477,7 @@
     }
   }
 
+  // MODIFIED markCheckIn function
   async function markCheckIn() {
     if (!currentEmployeeId) {
         showAlert('Please login to mark attendance.');
@@ -1501,26 +1503,26 @@
         return;
     }
 
-    const newCheckInRecord = {
+    // Prepare the check-in record but DO NOT save it yet.
+    pendingCheckInRecord = {
         id: generateUniqueId('ACT-'),
         employeeId: currentEmployeeId,
         timestamp: now.toISOString(),
         type: 'Check-In',
-        location: null,
-        mapLink: null,
+        location: null, // Will be updated with actual location after visit/skip
+        mapLink: null,  // Will be updated with actual location after visit/skip
         details: 'Live GPS',
         checkOutId: null
     };
 
-    await saveDailyActivityRecords(newCheckInRecord);
-    localStorage.setItem(`currentCheckInSessionId_${currentEmployeeId}`, newCheckInRecord.id);
+    // Store the pending check-in ID in the modal's hidden input
+    document.getElementById('log-visit-checkin-id').value = pendingCheckInRecord.id;
 
-    showAlert(`Checked in at ${now.toLocaleTimeString()}`);
-    startLocationTracking();
-    await loadDailyActivity();
-
-    document.getElementById('log-visit-checkin-id').value = newCheckInRecord.id;
+    // Show the log visit modal
     document.getElementById('logVisitModal').style.display = 'flex';
+
+    // Start location tracking immediately to get current location for the modal
+    startLocationTracking();
   }
 
   async function markCheckOut() {
@@ -1571,9 +1573,16 @@
     await loadDailyActivity();
   }
 
+  // MODIFIED log-visit-form submission
   document.getElementById('log-visit-form').addEventListener('submit', async (e) => {
     e.preventDefault();
-    const checkInId = document.getElementById('log-visit-checkin-id').value;
+
+    if (!pendingCheckInRecord) {
+        showAlert('No pending check-in to link this visit to. Please try checking in again.');
+        closeLogVisitModal();
+        return;
+    }
+
     const clientName = document.getElementById('log-visit-client').value.trim();
     const visitPurpose = document.getElementById('log-visit-purpose').value.trim();
     const visitLocationInput = document.getElementById('log-visit-location').value.trim();
@@ -1593,6 +1602,7 @@
         };
         visitMapLink = `https://www.openstreetmap.org/?mlat=${currentLat}&mlon=${currentLng}#map=15/${currentLat}/${currentLng}`;
     } else {
+        // If live location is not available, try to geocode the manual input
         if (visitLocationInput) {
             try {
                 const geocoded = await reverseGeocode(null, null, visitLocationInput);
@@ -1604,19 +1614,26 @@
                     };
                     visitMapLink = `https://www.openstreetmap.org/?mlat=${geocoded.lat}&mlon=${geocoded.lng}#map=15/${geocoded.lat}/${geocoded.lng}`;
                 } else {
-                    visitLocationData = visitLocationInput;
+                    visitLocationData = visitLocationInput; // Fallback to raw input if geocoding fails
                 }
             } catch (error) {
                 console.error("Geocoding manual visit location failed:", error);
-                visitLocationData = visitLocationInput;
+                visitLocationData = visitLocationInput; // Fallback to raw input on error
             }
         } else {
             visitLocationData = 'N/A';
         }
     }
 
-    const now = new Date();
+    // Update the pending check-in record with the actual location data
+    pendingCheckInRecord.location = visitLocationData;
+    pendingCheckInRecord.mapLink = visitMapLink;
 
+    // Save the Check-In record
+    await saveDailyActivityRecords(pendingCheckInRecord);
+    localStorage.setItem(`currentCheckInSessionId_${currentEmployeeId}`, pendingCheckInRecord.id); // Mark as active check-in
+
+    const now = new Date();
     const newVisitRecord = {
         id: generateUniqueId('ACT-'),
         employeeId: currentEmployeeId,
@@ -1625,7 +1642,7 @@
         location: visitLocationData,
         mapLink: visitMapLink,
         details: `${clientName} - ${visitPurpose}`,
-        linkedCheckInId: checkInId
+        linkedCheckInId: pendingCheckInRecord.id // Link to the check-in record
     };
 
     await saveDailyActivityRecords(newVisitRecord);
@@ -1640,15 +1657,20 @@
     };
     await saveFollowUps(newFollowUp);
 
-    showAlert('Visit logged successfully and added to Follow Ups!');
+    showAlert('Check-in and Visit logged successfully! Visit details added to Follow Ups.');
     closeLogVisitModal();
     await loadDailyActivity();
     await loadFollowUps();
+    pendingCheckInRecord = null; // Clear pending record
   });
 
+  // MODIFIED skipVisit function
   async function skipVisit() {
-    const checkInId = document.getElementById('log-visit-checkin-id').value;
-    const now = new Date();
+    if (!pendingCheckInRecord) {
+        showAlert('No pending check-in to skip visit for. Please try checking in again.');
+        closeLogVisitModal();
+        return;
+    }
 
     const currentLat = document.getElementById('latitude').textContent;
     const currentLng = document.getElementById('longitude').textContent;
@@ -1664,8 +1686,20 @@
             address: currentAddress
         };
         skippedMapLink = `https://www.openstreetmap.org/?mlat=${currentLat}&mlon=${currentLng}#map=15/${currentLat}/${currentLng}`;
+    } else {
+        skippedLocationData = 'Location not available';
+        skippedMapLink = null;
     }
 
+    // Update the pending check-in record with the actual location data
+    pendingCheckInRecord.location = skippedLocationData;
+    pendingCheckInRecord.mapLink = skippedMapLink;
+
+    // Save the Check-In record
+    await saveDailyActivityRecords(pendingCheckInRecord);
+    localStorage.setItem(`currentCheckInSessionId_${currentEmployeeId}`, pendingCheckInRecord.id); // Mark as active check-in
+
+    const now = new Date();
     const newSkippedVisitRecord = {
         id: generateUniqueId('ACT-'),
         employeeId: currentEmployeeId,
@@ -1674,19 +1708,21 @@
         location: skippedLocationData,
         mapLink: skippedMapLink,
         details: 'Visit skipped by employee',
-        linkedCheckInId: checkInId
+        linkedCheckInId: pendingCheckInRecord.id // Link to the check-in record
     };
     await saveDailyActivityRecords(newSkippedVisitRecord);
 
-    showAlert('Visit skipped.');
+    showAlert('Check-in logged, visit skipped.');
     closeLogVisitModal();
     await loadDailyActivity();
+    pendingCheckInRecord = null; // Clear pending record
   }
 
   function closeLogVisitModal() {
     document.getElementById('logVisitModal').style.display = 'none';
     document.getElementById('log-visit-form').reset();
     document.getElementById('log-visit-checkin-id').value = '';
+    stopLocationTracking(); // Stop tracking when modal is closed
   }
 
   async function populateEmployeeFilter() {
@@ -1883,15 +1919,11 @@
                   if (geocoded.address) {
                       document.getElementById('current-address').textContent = geocoded.address;
 
-                      const activeCheckInSessionId = localStorage.getItem(`currentCheckInSessionId_${currentEmployeeId}`);
-                      if (activeCheckInSessionId) {
-                          let records = await getDailyActivityRecords(currentEmployeeId);
-                          const recordToUpdate = records.find(rec => rec.id === activeCheckInSessionId && rec.type === 'Check-In');
-                          if (recordToUpdate) {
-                              recordToUpdate.location = { lat: latitude, lng: longitude, address: geocoded.address };
-                              recordToUpdate.mapLink = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=15/${latitude}/${longitude}`;
-                              await saveDailyActivityRecords(recordToUpdate);
-                          }
+                      // Only update pendingCheckInRecord if it exists and is not yet saved
+                      if (pendingCheckInRecord && pendingCheckInRecord.id === document.getElementById('log-visit-checkin-id').value) {
+                          pendingCheckInRecord.location = { lat: latitude, lng: longitude, address: geocoded.address };
+                          pendingCheckInRecord.mapLink = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=15/${latitude}/${longitude}`;
+                          // No need to save here, it will be saved when visit is submitted/skipped
                       }
                   } else {
                       document.getElementById('current-address').textContent = 'Address not found';
@@ -2996,7 +3028,7 @@
 
   // --- Supabase Integration (Primary Storage) ---
   const supabaseUrl = 'https://smoapnooceqbreclhrka.supabase.co';
-  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNtb2Fwbm9vY2VxYnJlY2xocmthIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNTYxMjIsImV4cCI6MjA2NjkzMjEyMn0.FtXxRLdeBlSD5LZCsxMKUd0mFlS1HFcqA0g-ZG9suz8';
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNtb2Fwbm9vY2VxYnJlY2xocmthIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNTYxMjIsImexCjIwNjY5MzIxMjJ9.FtXxRLdeBlSD5LZCsxMKUd0mFlS1HFcqA0g-ZG9suz8';
   const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
   // --- Offline Queue Processing ---
