@@ -140,20 +140,19 @@
       border-radius: 10px;
       width: 90%;
       max-width: 400px;
-      position: relative; /* Added for close button positioning */
+      position: relative;
     }
     .modal-content h3 {
       margin-top: 0;
     }
     .close-modal {
-      position: absolute; /* Position close button */
+      position: absolute;
       top: 10px;
       right: 15px;
       font-size: 24px;
       cursor: pointer;
       color: var(--text-light);
     }
-    /* New styles for form-group */
     .form-group label {
       display: block;
       margin-bottom: 5px;
@@ -170,27 +169,25 @@
       background: #324a5f;
       color: #fff;
     }
-    /* Styles for buttons in City Screen */
     #city .city-actions button {
-      background-color: var(--accent-color); /* Accent color */
-      color: #000; /* Black text */
+      background-color: var(--accent-color);
+      color: #000;
       font-weight: bold;
       border: none;
       padding: 10px 15px;
       border-radius: 6px;
       cursor: pointer;
-      margin-right: 10px; /* Spacing between buttons */
+      margin-right: 10px;
     }
     #city .city-actions button.add-city {
-      background-color: #28a745; /* A green color for Add City */
+      background-color: #28a745;
       color: #fff;
     }
     #city .city-actions button.search-city {
-      background-color: #007bff; /* A blue color for Search */
+      background-color: #007bff;
       color: #fff;
     }
 
-    /* Styles for User Profile Screen */
     #profile form label {
       display: block;
       margin-top: 10px;
@@ -202,7 +199,7 @@
     #profile form input[type="text"],
     #profile form input[type="email"],
     #profile form input[type="password"],
-    #profile form input[type="file"] { /* Added file input styling */
+    #profile form input[type="file"] {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
@@ -218,7 +215,7 @@
     }
 
     #profile .password-input-container input {
-      padding-right: 40px; /* Make space for the eye icon */
+      padding-right: 40px;
     }
 
     #profile .password-input-container .toggle-password {
@@ -231,7 +228,7 @@
     }
 
     #profile button.signup-button {
-      background-color: #28a745; /* Green color for Sign up */
+      background-color: #28a745;
       color: #fff;
       padding: 12px 20px;
       border: none;
@@ -262,11 +259,11 @@
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--accent-color);
-      margin-bottom: 10px; /* Adjusted margin */
+      margin-bottom: 10px;
     }
     .sidebar .profile-details {
       text-align: center;
-      margin-bottom: 20px; /* Space before buttons */
+      margin-bottom: 20px;
     }
     .sidebar .profile-details p {
       margin: 2px 0;
@@ -274,7 +271,6 @@
       color: var(--text-light);
     }
 
-    /* State Management specific styles */
     #state .card {
       background: var(--card-bg);
       border-radius: 16px;
@@ -308,17 +304,16 @@
       border: 1px solid #00d4ff;
     }
 
-    /* Custom Alert/Confirm Modal */
     #customAlertModal, #customConfirmModal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1001; /* Sit on top */
+        display: none;
+        position: fixed;
+        z-index: 1001;
         left: 0;
         top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
         justify-content: center;
         align-items: center;
     }
@@ -346,7 +341,6 @@
         font-weight: bold;
     }
 
-/* Responsive layout: stack sidebar above content on small screens */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -374,7 +368,7 @@
 
   .sidebar .profile-photo,
   .sidebar .profile-details {
-    display: none; /* Hide on small screens */
+    display: none;
   }
 
   .main-content {
@@ -421,24 +415,23 @@
     color: var(--accent-color);
   }
 
-  /* Specific ::before content for each table */
   #daily-activity-table-body td:nth-of-type(1)::before { content: "Employee ID:"; }
-  #daily-activity-table-body td:nth-of-type(2)::before { content: "Name:"; } /* NEW */
-  #daily-activity-table-body td:nth-of-type(3)::before { content: "Type:"; } /* Adjusted index */
-  #daily-activity-table-body td:nth-of-type(4)::before { content: "Date & Time:"; } /* Adjusted index */
-  #daily-activity-table-body td:nth-of-type(5)::before { content: "Location:"; } /* Adjusted index */
-  #daily-activity-table-body td:nth-of-type(6)::before { content: "Latitude:"; } /* Adjusted index */
-  #daily-activity-table-body td:nth-of-type(7)::before { content: "Longitude:"; } /* Adjusted index */
-  #daily-activity-table-body td:nth-of-type(8)::before { content: "Map:"; } /* Adjusted index */
-  #daily-activity-table-body td:nth-of-type(9)::before { content: "Details:"; } /* Adjusted index */
+  #daily-activity-table-body td:nth-of-type(2)::before { content: "Name:"; }
+  #daily-activity-table-body td:nth-of-type(3)::before { content: "Type:"; }
+  #daily-activity-table-body td:nth-of-type(4)::before { content: "Date & Time:"; }
+  #daily-activity-table-body td:nth-of-type(5)::before { content: "Location:"; }
+  #daily-activity-table-body td:nth-of-type(6)::before { content: "Latitude:"; }
+  #daily-activity-table-body td:nth-of-type(7)::before { content: "Longitude:"; }
+  #daily-activity-table-body td:nth-of-type(8)::before { content: "Map:"; }
+  #daily-activity-table-body td:nth-of-type(9)::before { content: "Details:"; }
 
 
   #followup-table td:nth-of-type(1)::before { content: "Employee ID:"; }
-  #followup-table td:nth-of-type(2)::before { content: "Name:"; } /* NEW */
-  #followup-table td:nth-of-type(3)::before { content: "Subject:"; } /* Adjusted index */
-  #followup-table td:nth-of-type(4)::before { content: "Date & Time:"; } /* Adjusted index */
-  #followup-table td:nth-of-type(5)::before { content: "Note:"; } /* Adjusted index */
-  #followup-table td:nth-of-type(6)::before { content: "Actions:"; } /* Adjusted index */
+  #followup-table td:nth-of-type(2)::before { content: "Name:"; }
+  #followup-table td:nth-of-type(3)::before { content: "Subject:"; }
+  #followup-table td:nth-of-type(4)::before { content: "Date & Time:"; }
+  #followup-table td:nth-of-type(5)::before { content: "Note:"; }
+  #followup-table td:nth-of-type(6)::before { content: "Actions:"; }
 
   #state-table td:nth-of-type(1)::before { content: "State:"; }
   #state-table td:nth-of-type(2)::before { content: "Actions:"; }
@@ -459,11 +452,14 @@
   #admin-details-table td:nth-of-type(4)::before { content: "Email:"; }
   #admin-details-table td:nth-of-type(5)::before { content: "Actions:"; }
 
-/* Location map pins */
 #daily-activity-table-body img {
   vertical-align: middle;
   margin-right: 5px;
 }
+}
+
+.hidden {
+  display: none !important;
 }
 
 </style>
@@ -471,18 +467,18 @@
 <body>
   <div class="sidebar">
     <h2>🚀 Tracker</h2>
-    <img id="sidebar-profile-photo" class="profile-photo" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b480eacc-40ca-4251-4c52-b6c5587b3aa7.png" alt="Profile Photo">
-    <div class="profile-details">
+    <img id="sidebar-profile-photo" class="profile-photo hidden" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b480eacc-40ca-4251-4c52-b6c5587b3aa7.png" alt="Profile Photo">
+    <div id="profile-details-container" class="profile-details hidden">
       <p id="sidebar-employee-name">Employee Name</p>
       <p id="sidebar-employee-id">EMP-ID</p>
     </div>
-    <button onclick="showSection('dashboard')">Dashboard</button>
-    <button onclick="showSection('daily-activity')">Daily Activity</button>
-    <button onclick="showSection('followups')">Follow Ups</button>
-    <button onclick="showSection('profile')">User  Profile</button>
-    <button onclick="showSection('employee-management')" id="employeeManagementBtn" style="display:none;">Employee Management</button>
-    <button onclick="showSection('admin-profile')" id="adminProfileBtn" style="display:none;">Admin Profile</button>
-    <button onclick="confirmLogout()" id="logoutBtn" style="display:none;">Logout</button>
+    <button onclick="showSection('dashboard')" id="dashboardBtn" class="hidden">Dashboard</button>
+    <button onclick="showSection('daily-activity')" id="dailyActivityBtn" class="hidden">Daily Activity</button>
+    <button onclick="showSection('followups')" id="followupsBtn" class="hidden">Follow Ups</button>
+    <button onclick="showSection('profile')" id="profileBtn" class="hidden">User Profile</button>
+    <button onclick="showSection('employee-management')" id="employeeManagementBtn" class="hidden">Employee Management</button>
+    <button onclick="showSection('admin-profile')" id="adminProfileBtn" class="hidden">Admin Profile</button>
+    <button onclick="confirmLogout()" id="logoutBtn" class="hidden">Logout</button>
     <button onclick="showSection('login')" id="loginBtn">Login</button>
   </div>
 
@@ -503,13 +499,13 @@
                     <label for="login-mobile-number">Mobile Number</label>
                     <input type="tel" id="login-mobile-number" class="form-control" placeholder="Enter your mobile number" required>
                 </div>
-                <div class="form-group" id="password-group" style="display: none;">
+                <div class="form-group" id="login-password-group" style="display: none;">
                     <label for="login-password">Password</label>
                     <input type="password" id="login-password" class="form-control" placeholder="Enter your password" required>
                 </div>
                 <div class="form-group">
                     <label for="login-role">Select Role</label>
-                    <select id="login-role" class="form-control" required>
+                    <select id="login-role" class="form-control" onchange="togglePasswordField()" required>
                         <option value="">-- Select Role --</option>
                         <option value="employee">Employee</option>
                         <option value="admin">Admin</option>
@@ -770,7 +766,7 @@
         <label for="log-visit-client">Client Name:</label>
         <input type="text" id="log-visit-client" placeholder="Client/Company Name" required>
         <label for="log-visit-purpose">Visit Purpose:</label>
-        <textarea id="log-visit-purpose" placeholder="Purpose / Notes" required></textarea>
+        <textarea type="text" id="log-visit-purpose" placeholder="Purpose / Notes" required></textarea>
         <label for="log-visit-location">Visit Location:</label>
         <input type="text" id="log-visit-location" placeholder="Visit Location" required>
         <div style="display: flex; justify-content: center; margin-top: 20px;">
@@ -863,2387 +859,162 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <script>
-  // Global variables for user state
-  let currentUserRole = null; // 'admin' or 'employee'
-  let currentEmployeeId = null; // The ID of the logged-in employee
-  let pendingCheckInRecord = null; // NEW: To store check-in data before visit logging
+// ✅ Supabase Initialization
+const supabase = window.supabase.createClient(
+  'https://smoapnooceqbreclhrka.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNtb2Fwbm9vY2VxYnJlY2xocmthIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNTYxMjIsImV4cCI6MjA2NjkzMjEyMn0.FtXxRLdeBlSD5LZCsxMKUd0mFlS1HFcqA0g-ZG9suz8'
+);
 
-  // Define allowed admin usernames and their common password
-  const adminCommonPassword = "scube@1234"; // Common password for all admins
-
-  // --- Pre-defined Employee Data ---
-  const initialEmployeeData = [
-    { name: "Snehasish Paul", employeeId: "SCS-03318", mobileNo: "8017892062", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Zuber Alam", employeeId: "SCS-01102", mobileNo: "9891377424", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Bharath Kumar TM", employeeId: "SCS-08017", mobileNo: "9844722312", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Shiva Kumarar", employeeId: "SCS-08016", mobileNo: "9611452782", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Tapas Kumar Dinda", employeeId: "SCS-03317", mobileNo: "9804443387", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Gopal Chandra Biswas", employeeId: "SCS-03313", mobileNo: "9432095612", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Saugat Majumdar", employeeId: "SCS-03303", mobileNo: "9831259094", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Chitrarath Senapati", employeeId: "SCS-03306", mobileNo: "9831282190", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Sukhendu Shekhar Mondal", employeeId: "SCS-03316", mobileNo: "7278942388", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Tarun Kumar Paramanik", employeeId: "SCS-03308", mobileNo: "9831650969", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Kartik Ghanta", employeeId: "SCS-03309", mobileNo: "7074099074", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Provat Naskar", employeeId: "SCS-03314", mobileNo: "7044486602", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Ravi Kumari", employeeId: "SCS-01103", mobileNo: "9548362042", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Abhilash Sarangi", employeeId: "SCS-067403", mobileNo: "8763523636", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Shubhadarshani Nath", employeeId: "SCS-067404", mobileNo: "7978143152", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' },
-    { name: "Kishan Kanodia", employeeId: "SCS-077106", mobileNo: "7999610074", emailId: "N/A", password: "scube@4321", photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png' }
-  ];
-
-  // --- Pre-defined Admin Data ---
-  const initialAdminData = [
-    { adminId: "ADM-S.S Singh", name: "Shanti Saran Singh", mobileNo: "9831038262" },
-    { adminId: "ADM-Sandeep", name: "Sandeep Sarkar", mobileNo: "9831036858" },
-    { adminId: "ADM-Snehashis", name: "Snehashis Saha", mobileNo: "9330199588" },
-    { adminId: "ADM-Komal", name: "Komal Gupta", mobileNo: "7003045682" },
-    { adminId: "ADM-Shoaib", name: "MD Shoaib Raza", mobileNo: "9831259095" }
-  ];
-
-  // List of allowed admin usernames (for password check)
-  const allowedAdminUsernames = initialAdminData.map(admin => admin.adminId);
-
-
-  // Initial load - show login screen
-  document.addEventListener('DOMContentLoaded', () => {
-    // --- MODIFIED: Pre-populate employee data and force-load admin data ---
-    // This section is now primarily for initial setup if Supabase is empty,
-    // or to ensure hardcoded admins exist.
-    // The actual login will fetch from Supabase.
-    initialEmployeeData.forEach(emp => {
-        // We still save to localStorage for caching/offline fallback
-        saveUserProfile({
-            employeeId: emp.employeeId,
-            name: emp.name,
-            mobileNo: emp.mobileNo,
-            emailId: emp.emailId,
-            password: emp.password,
-            photoUrl: emp.photoUrl
-        });
-    });
-
-    initialAdminData.forEach(admin => {
-        saveUserProfile({
-            employeeId: admin.adminId,
-            name: admin.name,
-            mobileNo: admin.mobileNo,
-            emailId: 'N/A',
-            password: adminCommonPassword,
-            photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png'
-        });
-    });
-    // --- END MODIFIED ---
-
-    // --- NEW: Check for persistent login session ---
-    const lastLoggedInRole = localStorage.getItem('lastLoggedInRole');
-    const lastLoggedInEmployeeId = localStorage.getItem('lastLoggedInEmployeeId');
-
-    if (lastLoggedInRole && lastLoggedInEmployeeId) {
-        currentUserRole = lastLoggedInRole;
-        currentEmployeeId = lastLoggedInEmployeeId;
-        // Retrieve the full profile to update sidebar details correctly
-        const userProfile = getUserProfile(currentEmployeeId); // This will now try Supabase first
-        updateSidebarProfile(userProfile.name, userProfile.employeeId, userProfile.photoUrl);
-        login(); // Call the login function to set up UI and navigate to appropriate section
-    } else {
-        showSection('login');
-        // Hide sidebar buttons until logged in
-        document.querySelectorAll('.sidebar button:not(#loginBtn)').forEach(btn => btn.style.display = 'none');
-        document.getElementById('loginBtn').style.display = 'block';
-        document.getElementById('logoutBtn').style.display = 'none';
-    }
-
-    // Ensure the login-role change event listener is set up
-    document.getElementById('login-role').addEventListener('change', function() {
-        const passwordGroup = document.getElementById('password-group');
-        const loginPasswordInput = document.getElementById('login-password');
-        const employeeIdGroup = document.getElementById('employee-id-group');
-        const loginEmployeeIdInput = document.getElementById('login-employee-id');
-        const adminUsernameGroup = document.getElementById('admin-username-group');
-        const loginAdminUsernameInput = document.getElementById('login-admin-username');
-        const mobileNumberGroup = document.getElementById('mobile-number-group');
-        const loginMobileNumberInput = document.getElementById('login-mobile-number');
-
-        if (this.value === 'admin') {
-            employeeIdGroup.style.display = 'none';
-            loginEmployeeIdInput.removeAttribute('required');
-            loginEmployeeIdInput.value = '';
-
-            adminUsernameGroup.style.display = 'block';
-            loginAdminUsernameInput.setAttribute('required', 'required');
-
-            mobileNumberGroup.style.display = 'block';
-            loginMobileNumberInput.setAttribute('required', 'required');
-
-            passwordGroup.style.display = 'block';
-            loginPasswordInput.setAttribute('required', 'required');
-        } else if (this.value === 'employee') {
-            employeeIdGroup.style.display = 'block';
-            loginEmployeeIdInput.setAttribute('required', 'required');
-
-            adminUsernameGroup.style.display = 'none';
-            loginAdminUsernameInput.removeAttribute('required');
-            loginAdminUsernameInput.value = '';
-
-            mobileNumberGroup.style.display = 'block';
-            loginMobileNumberInput.setAttribute('required', 'required');
-
-            passwordGroup.style.display = 'block';
-            loginPasswordInput.setAttribute('required', 'required');
-        } else { // Default or no role selected
-            employeeIdGroup.style.display = 'block';
-            loginEmployeeIdInput.setAttribute('required', 'required');
-            adminUsernameGroup.style.display = 'none';
-            loginAdminUsernameInput.removeAttribute('required');
-            loginAdminUsernameInput.value = '';
-
-            mobileNumberGroup.style.display = 'block';
-            loginMobileNumberInput.setAttribute('required', 'required');
-
-            passwordGroup.style.display = 'none'; // Hide password by default
-            loginPasswordInput.removeAttribute('required');
-            loginPasswordInput.value = '';
-        }
-    });
-    // Trigger change event to set initial state based on default selected option
-    document.getElementById('login-role').dispatchEvent(new Event('change'));
-  });
-
-  document.getElementById('login-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const employeeIdInput = document.getElementById('login-employee-id').value.trim();
-      const adminUsernameInput = document.getElementById('login-admin-username').value.trim();
-      const passwordInput = document.getElementById('login-password').value;
-      const mobileNumberInput = document.getElementById('login-mobile-number').value.trim();
-      const roleSelect = document.getElementById('login-role').value;
-
-      if (!roleSelect) {
-          showAlert('Please select a Role.');
-          return;
-      }
-
-      const loginData = { employeeIdInput, adminUsernameInput, passwordInput, mobileNumberInput, roleSelect };
-
-      showConfirm('Are you sure you want to log in?', (confirmed) => {
-          if (confirmed) {
-              processLogin(loginData);
-          } else {
-              showAlert('Login cancelled.');
-          }
-      });
-  });
-
-  /**
-   * Checks if an employee ID is authorized to log in.
-   * This function will now primarily check Supabase.
-   * @param {string} employeeId The employee ID to check for authorization.
-   * @returns {Promise<boolean>} True if the employee is authorized (profile exists), false otherwise.
-   */
-  async function isEmployeeAuthorized(employeeId) {
-      if (!employeeId || (!employeeId.startsWith('SCS-') && !employeeId.startsWith('ADM-'))) {
-          return false;
-      }
-      const profile = await getUserProfile(employeeId); // Fetch from Supabase/cache
-      return profile && profile.employeeId === employeeId; // Check if a valid profile was found
+// New function to show/hide the password field based on role selection
+function togglePasswordField() {
+  const loginRole = document.getElementById('login-role').value;
+  const passwordGroup = document.getElementById('login-password-group');
+  if (loginRole === 'employee' || loginRole === 'admin') {
+    passwordGroup.style.display = 'block';
+  } else {
+    passwordGroup.style.display = 'none';
   }
-
-  async function processLogin(loginData) {
-    const { employeeIdInput, adminUsernameInput, passwordInput, mobileNumberInput, roleSelect } = loginData;
-
-    if (roleSelect === 'employee') {
-        if (!employeeIdInput) {
-            showAlert('Please enter Employee ID.');
-            return;
-        }
-        if (!employeeIdInput.startsWith('SCS-')) {
-            showAlert('Employee ID must start with "SCS-" (e.g., SCS-12345 or SCS-123456).');
-            return;
-        }
-
-        const isAuth = await isEmployeeAuthorized(employeeIdInput);
-        if (!isAuth) {
-            showAlert('Employee ID not authorized. Please check your ID or contact your administrator.');
-            return;
-        }
-
-        const employeeProfile = await getUserProfile(employeeIdInput);
-
-        if (!employeeProfile || !employeeProfile.password || !employeeProfile.mobileNo) {
-            showAlert('Employee profile data incomplete. Please contact your administrator.');
-            return;
-        }
-
-        // Validate the entered mobile number
-        if (mobileNumberInput !== employeeProfile.mobileNo.trim()) {
-            showAlert('Incorrect mobile number for Employee login.');
-            return;
-        }
-
-        // Validate the entered password against the predefined password
-        if (passwordInput !== 'scube@4321') { // Employee password
-            showAlert('Incorrect password for Employee login.');
-            return;
-        }
-
-        currentUserRole = 'employee';
-        currentEmployeeId = employeeIdInput;
-        showAlert(`Employee ${employeeIdInput} login successful!`);
-        login();
-
-    } else if (roleSelect === 'admin') {
-        if (!adminUsernameInput) {
-            showAlert('Please enter Admin Username.');
-            return;
-        }
-
-        const adminProfile = await getUserProfile(adminUsernameInput);
-        let isPredefinedAdmin = allowedAdminUsernames.includes(adminUsernameInput);
-
-        if (!isPredefinedAdmin && (!adminProfile || Object.keys(adminProfile).length === 0)) {
-            showAlert('Admin Username not found. Please check your username or add it via the "Add Admin" feature if you are an existing admin.');
-            return;
-        }
-
-        // For predefined admins, check against the common password
-        if (isPredefinedAdmin) {
-            // Ensure a profile exists for predefined admins upon first login, and get their mobile number
-            if (!adminProfile || Object.keys(adminProfile).length === 0) {
-                const foundAdminData = initialAdminData.find(admin => admin.adminId === adminUsernameInput);
-                const newAdminProfile = {
-                    employeeId: adminUsernameInput,
-                    name: foundAdminData ? foundAdminData.name : adminUsernameInput.replace('ADM-', ''),
-                    mobileNo: foundAdminData ? foundAdminData.mobileNo : 'N/A', // Get mobile from initial data
-                    emailId: 'N/A',
-                    password: adminCommonPassword // Use the common admin password
-                };
-                await saveUserProfile(newAdminProfile); // Save to Supabase
-                Object.assign(adminProfile, newAdminProfile); // Update local adminProfile for immediate use
-            }
-
-            if (mobileNumberInput !== adminProfile.mobileNo.trim()) {
-                showAlert('Incorrect mobile number for Admin login.');
-                return;
-            }
-
-            if (passwordInput !== 'scube@1234') { // Admin password
-                showAlert('Incorrect password for Admin login.');
-                return;
-            }
-        } else {
-            // For dynamically added admins, check against their specific password and mobile number
-            if (!adminProfile.mobileNo) {
-                showAlert('Admin profile data incomplete. Please contact your administrator.');
-                return;
-            }
-            if (mobileNumberInput !== adminProfile.mobileNo.trim()) {
-                showAlert('Incorrect mobile number for Admin login.');
-                return;
-            }
-            if (passwordInput !== adminProfile.password) {
-                showAlert('Incorrect password for Admin login.');
-                return;
-            }
-        }
-
-        currentEmployeeId = adminUsernameInput;
-        currentUserRole = 'admin';
-        showAlert(`Admin ${adminUsernameInput} login successful!`);
-        login();
-    }
 }
 
-  function login() {
-      document.getElementById('loginBtn').style.display = 'none';
-      document.getElementById('logoutBtn').style.display = 'block';
-      document.querySelectorAll('.sidebar button:not(#loginBtn):not(#logoutBtn)').forEach(btn => btn.style.display = 'block');
+// Function to handle login success
+function onLoginSuccess(role) {
+  // Hide login-specific buttons
+  document.getElementById('loginBtn').classList.add('hidden');
 
-      localStorage.setItem('lastLoggedInRole', currentUserRole);
-      localStorage.setItem('lastLoggedInEmployeeId', currentEmployeeId);
+  // Show common buttons
+  document.getElementById('dashboardBtn').classList.remove('hidden');
+  document.getElementById('dailyActivityBtn').classList.remove('hidden');
+  document.getElementById('followupsBtn').classList.remove('hidden');
+  document.getElementById('profileBtn').classList.remove('hidden');
+  document.getElementById('logoutBtn').classList.remove('hidden');
 
-      if (currentUserRole === 'admin') {
-          document.getElementById('employeeManagementBtn').style.display = 'block';
-          document.getElementById('adminProfileBtn').style.display = 'block';
-          showSection('admin-profile');
-          populateEmployeeFilter();
-      } else {
-          document.getElementById('employeeManagementBtn').style.display = 'none';
-          document.getElementById('adminProfileBtn').style.display = 'none';
-          showSection('dashboard');
-      }
-      updateSidebarProfile();
+  // Show role-specific buttons
+  if (role === 'admin') {
+    document.getElementById('employeeManagementBtn').classList.remove('hidden');
+    document.getElementById('adminProfileBtn').classList.remove('hidden');
   }
 
-  function confirmLogout() {
-      showConfirm('Are you sure you want to log out?', (confirmed) => {
-          if (confirmed) {
-              logout();
-          } else {
-              showAlert('Logout cancelled.');
-          }
-      });
-  }
-
-  function logout() {
-      currentUserRole = null;
-      currentEmployeeId = null;
-      stopLocationTracking();
-
-      localStorage.removeItem('lastLoggedInRole');
-      localStorage.removeItem('lastLoggedInEmployeeId');
-
-      showAlert('Logged out successfully!');
-      showSection('login');
-      document.querySelectorAll('.sidebar button:not(#loginBtn)').forEach(btn => btn.style.display = 'none');
-      document.getElementById('loginBtn').style.display = 'block';
-      document.getElementById('logoutBtn').style.display = 'none';
-      document.getElementById('sidebar-employee-name').textContent = "Employee Name";
-      document.getElementById('sidebar-employee-id').textContent = "EMP-ID";
-      document.getElementById('sidebar-profile-photo').src = "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b480eacc-40ca-4251-4c52-b6c5587b3aa7.png";
-  }
-
-  const customAlertModal = document.getElementById('customAlertModal');
-  const alertMessage = document.getElementById('alertMessage');
-
-  const customConfirmModal = document.getElementById('customConfirmModal');
-  const confirmMessage = document.getElementById('confirmMessage');
-  const confirmYesButton = document.getElementById('confirmYes');
-  const confirmNoButton = document.getElementById('confirmNo');
-  let confirmCallback = null;
-
-  let watchId = null;
-
-  async function showSection(sectionId) {
-    if (sectionId !== 'daily-activity') {
-        stopLocationTracking();
-    }
-
-    const restrictedSections = ['dashboard', 'daily-activity', 'followups', 'profile', 'employee-management', 'admin-profile'];
-    if (restrictedSections.includes(sectionId) && !currentUserRole) {
-        showAlert('Please login to access this section.');
-        return;
-    }
-
-    if (sectionId === 'employee-management' && currentUserRole !== 'admin') {
-        showAlert('Access Denied: Only administrators can view employee details.');
-        return;
-    }
-    if (sectionId === 'admin-profile' && currentUserRole !== 'admin') {
-        showAlert('Access Denied: Only administrators can view their profile here.');
-        return;
-    }
-
-    const sections = document.querySelectorAll('.main-content section');
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
-    document.getElementById(sectionId).classList.add('active');
-
-    if (sectionId === 'dashboard') {
-        document.getElementById('dashboard-welcome-message').textContent = `Welcome, ${currentEmployeeId}!`;
-    } else if (sectionId === 'daily-activity') {
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('activity-date-filter').value = today;
-
-        if (currentUserRole === 'admin') {
-            document.getElementById('employee-filter-container').style.display = 'block';
-            await populateEmployeeFilter();
-        } else {
-            document.getElementById('employee-filter-container').style.display = 'none';
-        }
-        await loadDailyActivity();
-    } else if (sectionId === 'followups') {
-      await loadFollowUps();
-    } else if (sectionId === 'state') {
-      await loadStates();
-    } else if (sectionId === 'city') {
-      await loadStatesForCitySelect();
-      await loadCities();
-    } else if (sectionId === 'profile') {
-      await loadUserProfile();
-    } else if (sectionId === 'employee-management') {
-      await loadEmployeeDetails();
-    } else if (sectionId === 'admin-profile') {
-      await loadAdminDetails();
-    }
-  }
-
-  function showAlert(message) {
-    alertMessage.textContent = message;
-    customAlertModal.style.display = 'flex';
-  }
-
-  function closeAlert() {
-    customAlertModal.style.display = 'none';
-  }
-
-  function showConfirm(message, callback) {
-    confirmMessage.textContent = message;
-    confirmCallback = callback;
-    customConfirmModal.style.display = 'flex';
-  }
-
-  confirmYesButton.onclick = () => {
-    if (confirmCallback) {
-      confirmCallback(true);
-    }
-    customConfirmModal.style.display = 'none';
-  };
-
-  confirmNoButton.onclick = () => {
-    if (confirmCallback) {
-      confirmCallback(false);
-    }
-    customConfirmModal.style.display = 'none';
-  };
-
-  function togglePasswordVisibility() {
-    const passwordField = document.getElementById('profile-password');
-    if (passwordField.type === 'password') {
-      passwordField.type = 'text';
-    } else {
-      passwordField.type = 'password';
-    }
-  }
-
-  function generateUniqueId(prefix = '') {
-    const timestampPart = Date.now().toString(36);
-    const randomPart = Math.random().toString(36).substr(2, 5);
-
-    return `${prefix}${timestampPart}${randomPart}`.toUpperCase();
-  }
-
-  function exportToExcel(sectionId) {
-    let tableId;
-    let fileName;
-
-    switch (sectionId) {
-      case 'daily-activity':
-        tableId = 'daily-activity-table-body';
-        fileName = 'Daily_Activity_Records';
-        break;
-      case 'followups':
-        tableId = 'followup-table';
-        fileName = 'FollowUp_Records';
-        break;
-      case 'state':
-        tableId = 'state-table';
-        fileName = 'State_Management';
-        break;
-      case 'city':
-        tableId = 'city-table';
-        fileName = 'City_Management';
-        break;
-      case 'employee-management':
-        tableId = 'employee-details-table';
-        fileName = 'Employee_Details';
-        break;
-      case 'admin-profile':
-        tableId = 'admin-details-table';
-        fileName = 'Admin_Profile';
-        break;
-      default:
-        showAlert('Export not supported for this section.');
-        return;
-    }
-
-    const table = document.getElementById(tableId);
-    if (!table) {
-      showAlert('Table not found for export.');
-      return;
-    }
-
-    let csv = [];
-    const headers = document.querySelector(`#${sectionId} thead tr`).children;
-    let rowData = [];
-    for (let i = 0; i < headers.length; i++) {
-      if (headers[i].textContent.trim() !== 'Actions') {
-        rowData.push(headers[i].textContent.trim());
-      }
-    }
-    csv.push(rowData.join(','));
-
-    const rows = table.querySelectorAll('tr');
-    rows.forEach(row => {
-      rowData = [];
-      const cols = row.querySelectorAll('td');
-      cols.forEach((col, index) => {
-        if (sectionId === 'daily-activity' || index < cols.length - 1) {
-          let cellText = col.textContent.trim();
-          if (cellText.includes(',')) {
-            cellText = `"${cellText}"`;
-          }
-          rowData.push(cellText);
-        }
-      });
-      csv.push(rowData.join(','));
-    });
-
-    const csvString = csv.join('\n');
-    const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
-    const link = document.createElement('a');
-    if (link.download !== undefined) {
-      const url = URL.createObjectURL(blob);
-      link.setAttribute('href', url);
-      link.setAttribute('download', `${fileName}_${new Date().toISOString().split('T')[0]}.csv`);
-      link.style.visibility = 'hidden';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      showAlert('Data exported successfully to Excel (CSV)!');
-    } else {
-      showAlert('Your browser does not support downloading files directly. Please copy the data manually.');
-    }
-  }
-
-  // --- Daily Activity (Merged Attendance & Visits) ---
-
-  // MODIFIED: getDailyActivityRecords now fetches from Supabase first, then localStorage
-  async function getDailyActivityRecords(employeeIdFilter = null) {
-    let records = [];
-    try {
-      const { data, error } = await supabase
-        .from('daily_activities')
-        .select('*')
-        .order('timestamp', { ascending: false });
-      if (error) throw error;
-      records = data;
-      // Cache to localStorage
-      localStorage.setItem('dailyActivityRecords', JSON.stringify(records));
-    } catch (e) {
-      console.warn('Failed to fetch daily activities from Supabase, falling back to localStorage:', e.message);
-      records = localStorage.getItem('dailyActivityRecords') ? JSON.parse(localStorage.getItem('dailyActivityRecords')) : [];
-    }
-
-    if (currentUserRole === 'admin' && employeeIdFilter) {
-        return records.filter(rec => rec.employee_id === employeeIdFilter);
-    } else if (currentUserRole === 'employee') {
-        return records.filter(rec => rec.employee_id === currentEmployeeId);
-    }
-    return records;
-  }
-
-  // MODIFIED: saveDailyActivityRecords now saves to Supabase first, then localStorage
-  async function saveDailyActivityRecords(record) {
-    try {
-      // Convert record format for Supabase (snake_case, specific fields)
-      const supabaseRecord = {
-        id: record.id,
-        employee_id: record.employeeId,
-        name: (await getUserProfile(record.employeeId))?.name || '',
-        type: record.type,
-        timestamp: record.timestamp,
-        location: typeof record.location === 'object' ? record.location.address : record.location,
-        latitude: record.location?.lat?.toString() || null,
-        longitude: record.location?.lng?.toString() || null,
-        map_link: record.mapLink || null,
-        details: record.details,
-        linked_check_in_id: record.linkedCheckInId || null,
-        check_out_id: record.checkOutId || null
-      };
-
-      const { data, error } = await supabase.from('daily_activities').upsert([supabaseRecord], { onConflict: 'id' });
-      if (error) throw error;
-      console.log('Saved to Supabase:', data);
-
-      // Update localStorage cache after successful Supabase save
-      let allRecords = localStorage.getItem('dailyActivityRecords') ? JSON.parse(localStorage.getItem('dailyActivityRecords')) : [];
-      const existingIndex = allRecords.findIndex(r => r.id === record.id);
-      if (existingIndex !== -1) {
-        allRecords[existingIndex] = record;
-      } else {
-        allRecords.push(record);
-      }
-      localStorage.setItem('dailyActivityRecords', JSON.stringify(allRecords));
-
-    } catch (e) {
-      console.warn('Failed to save daily activity to Supabase, saving to localStorage queue:', e.message);
-      // Fallback to localStorage queue for offline sync
-      let offlineQueue = JSON.parse(localStorage.getItem('offlineDailyActivityQueue') || '[]');
-      offlineQueue.push({ action: 'upsert', record: record });
-      localStorage.setItem('offlineDailyActivityQueue', JSON.stringify(offlineQueue));
-
-      // Also update the main localStorage cache for immediate UI reflection
-      let allRecords = localStorage.getItem('dailyActivityRecords') ? JSON.parse(localStorage.getItem('dailyActivityRecords')) : [];
-      const existingIndex = allRecords.findIndex(r => r.id === record.id);
-      if (existingIndex !== -1) {
-        allRecords[existingIndex] = record;
-      } else {
-        allRecords.push(record);
-      }
-      localStorage.setItem('dailyActivityRecords', JSON.stringify(allRecords));
-      showAlert('Offline: Activity saved locally, will sync when online.');
-    }
-  }
-
-  // MODIFIED markCheckIn function
-  async function markCheckIn() {
-    if (!currentEmployeeId) {
-        showAlert('Please login to mark attendance.');
-        return;
-    }
-
-    const now = new Date();
-    const today = now.toLocaleDateString();
-    let records = await getDailyActivityRecords(currentEmployeeId);
-
-    const latestCheckIn = records
-        .filter(rec => rec.type === 'Check-In' && new Date(rec.timestamp).toLocaleDateString() === today)
-        .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
-        [0];
-
-    const latestCheckOut = records
-        .filter(rec => rec.type === 'Check-Out' && new Date(rec.timestamp).toLocaleDateString() === today)
-        .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
-        [0];
-
-    if (latestCheckIn && (!latestCheckOut || new Date(latestCheckIn.timestamp) > new Date(latestCheckOut.timestamp))) {
-        showAlert('You are already checked in! Please check out before checking in again.');
-        return;
-    }
-
-    // Prepare the check-in record but DO NOT save it yet.
-    pendingCheckInRecord = {
-        id: generateUniqueId('ACT-'),
-        employeeId: currentEmployeeId,
-        timestamp: now.toISOString(),
-        type: 'Check-In',
-        location: null, // Will be updated with actual location after visit/skip
-        mapLink: null,  // Will be updated with actual location after visit/skip
-        details: 'Live GPS',
-        checkOutId: null
-    };
-
-    // Store the pending check-in ID in the modal's hidden input
-    document.getElementById('log-visit-checkin-id').value = pendingCheckInRecord.id;
-
-    // Show the log visit modal
-    document.getElementById('logVisitModal').style.display = 'flex';
-
-    // Start location tracking immediately to get current location for the modal
-    startLocationTracking();
-  }
-
-  async function markCheckOut() {
-    if (!currentEmployeeId) {
-        showAlert('Please login to mark attendance.');
-        return;
-    }
-
-    const activeCheckInSessionId = localStorage.getItem(`currentCheckInSessionId_${currentEmployeeId}`);
-    if (!activeCheckInSessionId) {
-        showAlert('You need to check in first!');
-        return;
-    }
-
-    const now = new Date();
-    let records = await getDailyActivityRecords(currentEmployeeId);
-
-    const checkInRecordIndex = records.findIndex(rec => rec.id === activeCheckInSessionId && rec.type === 'Check-In');
-
-    if (checkInRecordIndex === -1) {
-        showAlert('No active check-in session found to check out from.');
-        localStorage.removeItem(`currentCheckInSessionId_${currentEmployeeId}`);
-        return;
-    }
-
-    const checkInRecord = records[checkInRecordIndex];
-
-    const newCheckOutRecord = {
-        id: generateUniqueId('ACT-'),
-        employeeId: currentEmployeeId,
-        timestamp: now.toISOString(),
-        type: 'Check-Out',
-        location: null,
-        mapLink: null,
-        details: 'Live GPS',
-        linkedCheckInId: checkInRecord.id
-    };
-
-    checkInRecord.checkOutId = newCheckOutRecord.id;
-
-    await saveDailyActivityRecords(newCheckOutRecord);
-    await saveDailyActivityRecords(checkInRecord);
-
-    localStorage.removeItem(`currentCheckInSessionId_${currentEmployeeId}`);
-
-    showAlert(`Checked out at ${now.toLocaleTimeString()}`);
-    stopLocationTracking();
-    await loadDailyActivity();
-  }
-
-  // MODIFIED log-visit-form submission
-  document.getElementById('log-visit-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    if (!pendingCheckInRecord) {
-        showAlert('No pending check-in to link this visit to. Please try checking in again.');
-        closeLogVisitModal();
-        return;
-    }
-
-    const clientName = document.getElementById('log-visit-client').value.trim();
-    const visitPurpose = document.getElementById('log-visit-purpose').value.trim();
-    const visitLocationInput = document.getElementById('log-visit-location').value.trim();
-
-    const currentLat = document.getElementById('latitude').textContent;
-    const currentLng = document.getElementById('longitude').textContent;
-    let currentAddress = document.getElementById('current-address').textContent;
-
-    let visitLocationData = null;
-    let visitMapLink = null;
-
-    if (currentLat !== 'N/A' && currentLng !== 'N/A' && currentAddress !== 'Location tracking inactive') {
-        visitLocationData = {
-            lat: parseFloat(currentLat),
-            lng: parseFloat(currentLng),
-            address: currentAddress
-        };
-        visitMapLink = `https://www.openstreetmap.org/?mlat=${currentLat}&mlon=${currentLng}#map=15/${currentLat}/${currentLng}`;
-    } else {
-        // If live location is not available, try to geocode the manual input
-        if (visitLocationInput) {
-            try {
-                const geocoded = await reverseGeocode(null, null, visitLocationInput);
-                if (geocoded.address) {
-                    visitLocationData = {
-                        lat: geocoded.lat,
-                        lng: geocoded.lng,
-                        address: geocoded.address
-                    };
-                    visitMapLink = `https://www.openstreetmap.org/?mlat=${geocoded.lat}&mlon=${geocoded.lng}#map=15/${geocoded.lat}/${geocoded.lng}`;
-                } else {
-                    visitLocationData = visitLocationInput; // Fallback to raw input if geocoding fails
-                }
-            } catch (error) {
-                console.error("Geocoding manual visit location failed:", error);
-                visitLocationData = visitLocationInput; // Fallback to raw input on error
-            }
-        } else {
-            visitLocationData = 'N/A';
-        }
-    }
-
-    // Update the pending check-in record with the actual location data
-    pendingCheckInRecord.location = visitLocationData;
-    pendingCheckInRecord.mapLink = visitMapLink;
-
-    // Save the Check-In record
-    await saveDailyActivityRecords(pendingCheckInRecord);
-    localStorage.setItem(`currentCheckInSessionId_${currentEmployeeId}`, pendingCheckInRecord.id); // Mark as active check-in
-
-    const now = new Date();
-    const newVisitRecord = {
-        id: generateUniqueId('ACT-'),
-        employeeId: currentEmployeeId,
-        timestamp: now.toISOString(),
-        type: 'Visit',
-        location: visitLocationData,
-        mapLink: visitMapLink,
-        details: `${clientName} - ${visitPurpose}`,
-        linkedCheckInId: pendingCheckInRecord.id // Link to the check-in record
-    };
-
-    await saveDailyActivityRecords(newVisitRecord);
-
-    const newFollowUp = {
-        id: generateUniqueId('FUP-'),
-        employeeId: currentEmployeeId,
-        subject: `Visit: ${clientName}`,
-        datetime: now.toISOString(),
-        note: `Location: ${typeof visitLocationData === 'object' ? visitLocationData.address : visitLocationData}\nPurpose: ${visitPurpose}`,
-        createdAt: now.toISOString()
-    };
-    await saveFollowUps(newFollowUp);
-
-    showAlert('Check-in and Visit logged successfully! Visit details added to Follow Ups.');
-    closeLogVisitModal();
-    await loadDailyActivity();
-    await loadFollowUps();
-    pendingCheckInRecord = null; // Clear pending record
+  // Show the user's profile info
+  document.getElementById('sidebar-profile-photo').classList.remove('hidden');
+  document.getElementById('profile-details-container').classList.remove('hidden');
+  
+  // Navigate to the dashboard
+  showSection('dashboard');
+}
+
+// A stub for the showSection function to manage active sections
+function showSection(sectionId) {
+  // Hide all sections first
+  document.querySelectorAll('section').forEach(section => {
+    section.classList.remove('active');
   });
 
-  // MODIFIED skipVisit function
-  async function skipVisit() {
-    if (!pendingCheckInRecord) {
-        showAlert('No pending check-in to skip visit for. Please try checking in again.');
-        closeLogVisitModal();
-        return;
+  // Show the requested section
+  const activeSection = document.getElementById(sectionId);
+  if (activeSection) {
+    activeSection.classList.add('active');
+  }
+}
+
+// ✅ 1. Check if Supabase is Online
+async function isSupabaseOnline() {
+  try {
+    const { error } = await supabase.from("daily_activities").select("id").limit(1);
+    return !error;
+  } catch {
+    return false;
+  }
+}
+
+// ✅ 2. Insert a Check-in Activity with retry logic
+async function insertCheckInActivity(activity) {
+  const MAX_RETRIES = 3;
+  let isOnline = false;
+
+  for (let i = 0; i < MAX_RETRIES; i++) {
+    if (await isSupabaseOnline()) {
+      isOnline = true;
+      break;
     }
+    // Optional: wait a moment before retrying
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
 
-    const currentLat = document.getElementById('latitude').textContent;
-    const currentLng = document.getElementById('longitude').textContent;
-    const currentAddress = document.getElementById('current-address').textContent;
-
-    let skippedLocationData = null;
-    let skippedMapLink = null;
-
-    if (currentLat !== 'N/A' && currentLng !== 'N/A' && currentAddress !== 'Location tracking inactive') {
-        skippedLocationData = {
-            lat: parseFloat(currentLat),
-            lng: parseFloat(currentLng),
-            address: currentAddress
-        };
-        skippedMapLink = `https://www.openstreetmap.org/?mlat=${currentLat}&mlon=${currentLng}#map=15/${currentLat}/${currentLng}`;
+  if (isOnline) {
+    const { error } = await supabase.from("daily_activities").insert(activity);
+    if (error) {
+      console.error("Insert error, saving locally:", error.message);
+      saveActivityOffline(activity);
+      alert("⚠️ Supabase error, saved locally.");
     } else {
-        skippedLocationData = 'Location not available';
-        skippedMapLink = null;
+      alert("✅ Check-in synced to Supabase.");
     }
+  } else {
+    saveActivityOffline(activity);
+    alert("📴 Offline or server unreachable: check-in saved locally.");
+  }
+}
 
-    // Update the pending check-in record with the actual location data
-    pendingCheckInRecord.location = skippedLocationData;
-    pendingCheckInRecord.mapLink = skippedMapLink;
+// ✅ 3. Save Activity Locally (Offline Mode)
+function saveActivityOffline(activity) {
+  const local = JSON.parse(localStorage.getItem("offline_activities") || "[]");
+  local.push(activity);
+  localStorage.setItem("offline_activities", JSON.stringify(local));
+}
 
-    // Save the Check-In record
-    await saveDailyActivityRecords(pendingCheckInRecord);
-    localStorage.setItem(`currentCheckInSessionId_${currentEmployeeId}`, pendingCheckInRecord.id); // Mark as active check-in
+// ✅ 4. Sync Offline Activities to Supabase
+async function syncOfflineActivities() {
+  const online = await isSupabaseOnline();
+  if (!online) return;
 
-    const now = new Date();
-    const newSkippedVisitRecord = {
-        id: generateUniqueId('ACT-'),
-        employeeId: currentEmployeeId,
-        timestamp: now.toISOString(),
-        type: 'Skipped Visit',
-        location: skippedLocationData,
-        mapLink: skippedMapLink,
-        details: 'Visit skipped by employee',
-        linkedCheckInId: pendingCheckInRecord.id // Link to the check-in record
-    };
-    await saveDailyActivityRecords(newSkippedVisitRecord);
+  const stored = JSON.parse(localStorage.getItem("offline_activities") || "[]");
+  if (!stored.length) return;
 
-    showAlert('Check-in logged, visit skipped.');
-    closeLogVisitModal();
-    await loadDailyActivity();
-    pendingCheckInRecord = null; // Clear pending record
+  const { error } = await supabase.from("daily_activities").insert(stored);
+  if (!error) {
+    localStorage.removeItem("offline_activities");
+    console.log("✅ Synced offline check-ins.");
+  } else {
+    console.error("❌ Failed syncing offline check-ins:", error.message);
+  }
+}
+window.addEventListener("load", syncOfflineActivities);
+window.addEventListener("online", syncOfflineActivities);
+
+// ✅ Optional: Admin - Fetch All Activities
+async function fetchAllActivitiesForAdmin() {
+  const { data, error } = await supabase
+    .from("daily_activities")
+    .select("*")
+    .order("timestamp", { ascending: false });
+
+  if (error) {
+    console.error("❌ Error fetching activities:", error.message);
+    return;
   }
 
-  function closeLogVisitModal() {
-    document.getElementById('logVisitModal').style.display = 'none';
-    document.getElementById('log-visit-form').reset();
-    document.getElementById('log-visit-checkin-id').value = '';
-    stopLocationTracking(); // Stop tracking when modal is closed
-  }
+  renderActivities(data); // Implement this to display data
+}
 
-  async function populateEmployeeFilter() {
-      const employeeFilter = document.getElementById('activity-employee-filter');
-      employeeFilter.innerHTML = '<option value="">All Employees</option>';
+// Initial state on page load
+document.addEventListener('DOMContentLoaded', () => {
+    // Ensure only the login screen is visible
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+    });
+    document.getElementById('login').classList.add('active');
 
-      const allProfiles = await getAllUserProfiles();
-      const employeeProfiles = allProfiles.filter(p => !p.employeeId.startsWith('ADM-'));
-
-      employeeProfiles.sort((a, b) => a.employeeId.localeCompare(b.employeeId));
-
-      employeeProfiles.forEach(profile => {
-          const option = document.createElement('option');
-          option.value = profile.employeeId;
-          option.textContent = profile.employeeId;
-          employeeFilter.appendChild(option);
-      });
-  }
-
-  async function loadDailyActivity() {
-    if (!currentEmployeeId) return;
-
-    const selectedDateValue = document.getElementById('activity-date-filter').value;
-    const selectedEmployeeId = document.getElementById('activity-employee-filter')?.value || null;
-    const searchTerm = document.getElementById('activity-search').value.toLowerCase();
-
-    const dailyActivityTableBody = document.getElementById('daily-activity-table-body');
-    dailyActivityTableBody.innerHTML = '';
-    let records = await getDailyActivityRecords(selectedEmployeeId);
-
-    if (selectedDateValue) {
-      records = records.filter(record => {
-        const recordDate = new Date(record.timestamp).toISOString().split('T')[0];
-        return recordDate === selectedDateValue;
-      });
-    }
-
-    if (searchTerm) {
-        records = records.filter(record =>
-            (record.employee_id && record.employee_id.toLowerCase().includes(searchTerm)) ||
-            (record.type && record.type.toLowerCase().includes(searchTerm)) ||
-            (record.location && (typeof record.location === 'string' ? record.location.toLowerCase().includes(searchTerm) : record.location.address?.toLowerCase().includes(searchTerm))) ||
-            (record.details && record.details.toLowerCase().includes(searchTerm))
-        );
-    }
-
-    records.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-
-    if (records.length === 0) {
-      dailyActivityTableBody.innerHTML = '<tr><td colspan="9">No daily activity records found</td></tr>';
-      return;
-    }
-
-    for (const record of records) {
-      const row = dailyActivityTableBody.insertRow();
-      const recordDateTime = new Date(record.timestamp);
-      const recordDate = recordDateTime.toLocaleDateString();
-      const recordTime = recordDateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
-      const employeeProfile = await getUserProfile(record.employee_id);
-      const employeeName = employeeProfile?.name || 'N/A';
-
-      row.insertCell(0).textContent = record.employee_id || 'N/A';
-      row.insertCell(1).textContent = employeeName;
-      row.insertCell(2).textContent = record.type;
-      row.insertCell(3).textContent = `${recordDate} ${recordTime}`;
-
-      const locationCell = row.insertCell(4);
-      const latitudeCell = row.insertCell(5);
-      const longitudeCell = row.insertCell(6);
-
-      if (record.location) {
-          if (typeof record.location === 'object' && record.location.address) {
-              locationCell.textContent = record.location.address;
-              latitudeCell.textContent = record.location.lat ? record.location.lat.toFixed(6) : 'N/A';
-              longitudeCell.textContent = record.location.lng ? record.location.lng.toFixed(6) : 'N/A';
-          } else {
-              locationCell.textContent = record.location;
-              latitudeCell.textContent = record.latitude || 'N/A';
-              longitudeCell.textContent = record.longitude || 'N/A';
-          }
-      } else {
-          locationCell.textContent = 'N/A';
-          latitudeCell.textContent = 'N/A';
-          longitudeCell.textContent = 'N/A';
-      }
-
-      const mapCell = row.insertCell(7);
-      if (record.map_link) {
-        mapCell.innerHTML = `<a href="${record.map_link}" target="_blank" style="color: #00d4ff;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Pushpin_red.svg/1200px-Pushpin_red.svg.png" alt="Map pin" width="20">
-                                View Map
-                             </a>`;
-      } else {
-        mapCell.textContent = 'N/A';
-      }
-
-      const detailsCell = row.insertCell(8);
-      detailsCell.textContent = record.details || 'N/A';
-    }
-  }
-
-  let leafletMap;
-  let leafletMarker;
-
-  async function reverseGeocode(lat, lng, query = null) {
-      let url;
-      if (lat !== null && lng !== null) {
-          url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}`;
-      } else if (query) {
-          url = `https://nominatim.openstreetmap.org/search?format=jsonv2&q=${encodeURIComponent(query)}&limit=1`;
-      } else {
-          return { address: 'N/A', lat: null, lng: null };
-      }
-
-      try {
-          const response = await fetch(url, {
-              headers: {
-                  'User-Agent': 'TrackerApp/1.0 (your-email@example.com)'
-              }
-          });
-          if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          const data = await response.json();
-
-          if (lat !== null && lng !== null) {
-              return {
-                  address: data.display_name || 'Unknown Address',
-                  lat: parseFloat(data.lat),
-                  lng: parseFloat(data.lon)
-              };
-          } else if (query && data.length > 0) {
-              return {
-                  address: data[0].display_name || 'Unknown Address',
-                  lat: parseFloat(data[0].lat),
-                  lng: parseFloat(data[0].lon)
-              };
-          } else {
-              return { address: 'Address not found', lat: null, lng: null };
-          }
-      } catch (error) {
-          console.error("Geocoding error:", error);
-          return { address: 'Geocoding failed', lat: null, lng: null };
-      }
-  }
-
-  function startLocationTracking() {
-      if (!navigator.geolocation) {
-          showAlert('Geolocation is not supported by your browser.');
-          return;
-      }
-
-      if (watchId !== null) {
-          return;
-      }
-
-      document.getElementById('location-status-text').textContent = 'Active';
-      document.getElementById('location-tracking-status').style.color = '#4CAF50';
-
-      const mapContainer = document.getElementById('map-container');
-      mapContainer.style.display = 'block';
-
-      if (!leafletMap) {
-          leafletMap = L.map('leaflet-map').setView([0, 0], 15);
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          }).addTo(leafletMap);
-          leafletMarker = L.marker([0, 0]).addTo(leafletMap);
-      }
-
-      const options = {
-          enableHighAccuracy: true,
-          timeout: 10000,
-          maximumAge: 3000
-      };
-
-      watchId = navigator.geolocation.watchPosition(
-          async (position) => {
-              const latitude = position.coords.latitude;
-              const longitude = position.coords.longitude;
-              const accuracy = position.coords.accuracy;
-
-              document.getElementById('latitude').textContent = latitude.toFixed(6);
-              document.getElementById('longitude').textContent = longitude.toFixed(6);
-              document.getElementById('accuracy').textContent = accuracy.toFixed(2);
-              document.getElementById('current-address').textContent = 'Getting address...';
-
-              leafletMap.setView([latitude, longitude]);
-              leafletMarker.setLatLng([latitude, longitude]);
-
-              try {
-                  const geocoded = await reverseGeocode(latitude, longitude);
-                  if (geocoded.address) {
-                      document.getElementById('current-address').textContent = geocoded.address;
-
-                      // Only update pendingCheckInRecord if it exists and is not yet saved
-                      if (pendingCheckInRecord && pendingCheckInRecord.id === document.getElementById('log-visit-checkin-id').value) {
-                          pendingCheckInRecord.location = { lat: latitude, lng: longitude, address: geocoded.address };
-                          pendingCheckInRecord.mapLink = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=15/${latitude}/${longitude}`;
-                          // No need to save here, it will be saved when visit is submitted/skipped
-                      }
-                  } else {
-                      document.getElementById('current-address').textContent = 'Address not found';
-                  }
-              } catch (error) {
-                  console.error("Reverse geocoding failed:", error);
-                  document.getElementById('current-address').textContent = 'Failed to get address';
-              }
-
-              console.log(`Live Location: Lat ${latitude}, Lon ${longitude}, Accuracy ${accuracy}m`);
-          },
-          (error) => {
-              document.getElementById('location-status-text').textContent = 'Error';
-              document.getElementById('location-tracking-status').style.color = '#F44336';
-
-              let errorMessage = 'Unknown error occurred.';
-              switch (error.code) {
-                  case error.PERMISSION_DENIED:
-                      errorMessage = 'Location access denied by the user. Please enable location for this site in your browser settings.';
-                      break;
-                  case error.POSITION_UNAVAILABLE:
-                      errorMessage = 'Location information is unavailable. Please ensure your device\'s GPS/Location Services are enabled and you have a clear signal.';
-                      break;
-                  case error.TIMEOUT:
-                      errorMessage = 'The request to get user location timed out. Try moving to an area with better signal.';
-                      break;
-              }
-              showAlert('Location tracking error: ' + errorMessage);
-              console.error('Geolocation error:', error);
-              stopLocationTracking();
-          },
-          options
-      );
-  }
-
-  function stopLocationTracking() {
-      if (watchId !== null) {
-          navigator.geolocation.clearWatch(watchId);
-          watchId = null;
-          document.getElementById('location-status-text').textContent = 'Inactive';
-          document.getElementById('location-tracking-status').style.color = '#F44336';
-          document.getElementById('latitude').textContent = 'N/A';
-          document.getElementById('longitude').textContent = 'N/A';
-          document.getElementById('accuracy').textContent = 'N/A';
-          document.getElementById('current-address').textContent = 'Location tracking inactive';
-      }
-  }
-
-  // --- Follow Ups ---
-
-  // MODIFIED: getFollowUps now fetches from Supabase first, then localStorage
-  async function getFollowUps(employeeIdFilter = null) {
-    let followups = [];
-    try {
-      const { data, error } = await supabase
-        .from('follow_ups')
-        .select('*')
-        .order('created_at', { ascending: false });
-      if (error) throw error;
-      followups = data;
-      localStorage.setItem('followUps', JSON.stringify(followups));
-    } catch (e) {
-      console.warn('Failed to fetch follow-ups from Supabase, falling back to localStorage:', e.message);
-      followups = localStorage.getItem('followUps') ? JSON.parse(localStorage.getItem('followUps')) : [];
-    }
-
-    if (currentUserRole === 'admin' && employeeIdFilter) {
-        return followups.filter(f => f.employee_id === employeeIdFilter);
-    } else if (currentUserRole === 'employee') {
-        return followups.filter(f => f.employee_id === currentEmployeeId);
-    }
-    return followups;
-  }
-
-  // MODIFIED: saveFollowUps now saves to Supabase first, then localStorage
-  async function saveFollowUps(followup) {
-    try {
-      const supabaseFollowup = {
-        id: followup.id,
-        employee_id: followup.employeeId,
-        name: (await getUserProfile(followup.employeeId))?.name || '',
-        subject: followup.subject,
-        datetime: followup.datetime,
-        note: followup.note,
-        created_at: followup.createdAt
-      };
-      const { data, error } = await supabase.from('follow_ups').upsert([supabaseFollowup], { onConflict: 'id' });
-      if (error) throw error;
-      console.log('Saved follow-up to Supabase:', data);
-
-      let allFollowups = localStorage.getItem('followUps') ? JSON.parse(localStorage.getItem('followUps')) : [];
-      const existingIndex = allFollowups.findIndex(f => f.id === followup.id);
-      if (existingIndex !== -1) {
-        allFollowups[existingIndex] = followup;
-      } else {
-        allFollowups.push(followup);
-      }
-      localStorage.setItem('followUps', JSON.stringify(allFollowups));
-
-    } catch (e) {
-      console.warn('Failed to save follow-up to Supabase, saving to localStorage queue:', e.message);
-      let offlineQueue = JSON.parse(localStorage.getItem('offlineFollowUpQueue') || '[]');
-      offlineQueue.push({ action: 'upsert', record: followup });
-      localStorage.setItem('offlineFollowUpQueue', JSON.stringify(offlineQueue));
-
-      let allFollowups = localStorage.getItem('followUps') ? JSON.parse(localStorage.getItem('followUps')) : [];
-      const existingIndex = allFollowups.findIndex(f => f.id === followup.id);
-      if (existingIndex !== -1) {
-        allFollowups[existingIndex] = followup;
-      } else {
-        allFollowups.push(followup);
-      }
-      localStorage.setItem('followUps', JSON.stringify(allFollowups));
-      showAlert('Offline: Follow-up saved locally, will sync when online.');
-    }
-  }
-
-  function addFollowUpEntry() {
-    if (!currentEmployeeId) {
-        showAlert('Please login to add follow-ups.');
-        return;
-    }
-    document.getElementById('followup-subject').focus();
-  }
-
-  document.getElementById('followup-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const subject = document.getElementById('followup-subject').value;
-    const datetime = document.getElementById('followup-datetime').value;
-    const note = document.getElementById('followup-note').value;
-    const docId = document.getElementById('followup-doc-id') ? document.getElementById('followup-doc-id').value : '';
-
-    let followupToSave;
-    if (docId) {
-      let followups = await getFollowUps(currentEmployeeId);
-      const index = followups.findIndex(f => f.id === docId);
-      if (index !== -1) {
-        followupToSave = { ...followups[index], subject, datetime, note };
-        showAlert('Follow-up updated successfully!');
-      } else {
-        showAlert('Follow-up not found for update.');
-        return;
-      }
-    } else {
-      followupToSave = {
-        id: generateUniqueId('FUP-'),
-        employeeId: currentEmployeeId,
-        subject,
-        datetime,
-        note,
-        createdAt: new Date().toISOString()
-      };
-      showAlert('Follow-up added successfully!');
-    }
-    await saveFollowUps(followupToSave);
-    document.getElementById('followup-form').reset();
-    if (document.getElementById('followup-doc-id')) document.getElementById('followup-doc-id').value = '';
-    await loadFollowUps();
-  });
-
-  async function editFollowUp(docId) {
-    const followups = await getFollowUps(currentEmployeeId);
-    const followup = followups.find(f => f.id === docId);
-    if (followup) {
-      let docIdInput = document.getElementById('followup-doc-id');
-      if (!docIdInput) {
-        docIdInput = document.createElement('input');
-        docIdInput.type = 'hidden';
-        docIdInput.id = 'followup-doc-id';
-        document.getElementById('followup-form').prepend(docIdInput);
-      }
-      docIdInput.value = followup.id;
-      document.getElementById('followup-subject').value = followup.subject;
-      document.getElementById('followup-datetime').value = followup.datetime;
-      document.getElementById('followup-note').value = followup.note;
-      showAlert('Fields populated for editing. Click "Save Follow-Up" to update.');
-    } else {
-      showAlert('Follow-up not found.');
-    }
-  }
-
-  async function deleteFollowUp(docId) {
-    showConfirm('Are you sure you want to delete this follow-up?', async (confirmed) => {
-      if (confirmed) {
-        try {
-          const { error } = await supabase.from('follow_ups').delete().eq('id', docId);
-          if (error) throw error;
-          showAlert('Follow-up deleted successfully from Supabase!');
-
-          // Update localStorage cache
-          let allFollowups = localStorage.getItem('followUps') ? JSON.parse(localStorage.getItem('followUps')) : [];
-          allFollowups = allFollowups.filter(f => f.id !== docId);
-          localStorage.setItem('followUps', JSON.stringify(allFollowups));
-
-        } catch (e) {
-          console.warn('Failed to delete follow-up from Supabase, adding to offline queue:', e.message);
-          let offlineQueue = JSON.parse(localStorage.getItem('offlineFollowUpQueue') || '[]');
-          offlineQueue.push({ action: 'delete', id: docId, table: 'follow_ups' });
-          localStorage.setItem('offlineFollowUpQueue', JSON.stringify(offlineQueue));
-          showAlert('Offline: Follow-up marked for deletion locally, will sync when online.');
-
-          // Optimistically remove from local cache
-          let allFollowups = localStorage.getItem('followUps') ? JSON.parse(localStorage.getItem('followUps')) : [];
-          allFollowups = allFollowups.filter(f => f.id !== docId);
-          localStorage.setItem('followUps', JSON.stringify(allFollowups));
+    // Add a class to all buttons and profile elements that should be hidden
+    const sidebarElements = ['sidebar-profile-photo', 'profile-details-container', 'dashboardBtn', 'dailyActivityBtn', 'followupsBtn', 'profileBtn', 'employeeManagementBtn', 'adminProfileBtn', 'logoutBtn'];
+    sidebarElements.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.classList.add('hidden');
         }
-        await loadFollowUps();
-      }
     });
-  }
-
-  // --- State Management ---
-
-  // MODIFIED: getStates now fetches from Supabase first, then localStorage
-  async function getStates() {
-    let states = [];
-    try {
-      const { data, error } = await supabase
-        .from('states')
-        .select('*')
-        .order('name', { ascending: true });
-      if (error) throw error;
-      states = data;
-      localStorage.setItem('states', JSON.stringify(states));
-    } catch (e) {
-      console.warn('Failed to fetch states from Supabase, falling back to localStorage:', e.message);
-      states = localStorage.getItem('states') ? JSON.parse(localStorage.getItem('states')) : [];
-    }
-    return states;
-  }
-
-  // MODIFIED: saveStatesData now saves to Supabase first, then localStorage
-  async function saveStatesData(state) {
-    try {
-      const supabaseState = {
-        id: state.id,
-        name: state.name,
-        created_at: state.createdAt
-      };
-      const { data, error } = await supabase.from('states').upsert([supabaseState], { onConflict: 'id' });
-      if (error) throw error;
-      console.log('Saved state to Supabase:', data);
-
-      let allStates = localStorage.getItem('states') ? JSON.parse(localStorage.getItem('states')) : [];
-      const existingIndex = allStates.findIndex(s => s.id === state.id);
-      if (existingIndex !== -1) {
-        allStates[existingIndex] = state;
-      } else {
-        allStates.push(state);
-      }
-      localStorage.setItem('states', JSON.stringify(allStates));
-
-    } catch (e) {
-      console.warn('Failed to save state to Supabase, saving to localStorage queue:', e.message);
-      let offlineQueue = JSON.parse(localStorage.getItem('offlineStateQueue') || '[]');
-      offlineQueue.push({ action: 'upsert', record: state });
-      localStorage.setItem('offlineStateQueue', JSON.stringify(offlineQueue));
-
-      let allStates = localStorage.getItem('states') ? JSON.parse(localStorage.getItem('states')) : [];
-      const existingIndex = allStates.findIndex(s => s.id === state.id);
-      if (existingIndex !== -1) {
-        allStates[existingIndex] = state;
-      } else {
-        allStates.push(state);
-      }
-      localStorage.setItem('states', JSON.stringify(allStates));
-      showAlert('Offline: State saved locally, will sync when online.');
-    }
-  }
-
-  document.getElementById('state-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const stateNameInput = document.getElementById('state-name');
-    const stateName = stateNameInput.value.trim();
-
-    if (!stateName) {
-      showAlert('State Name cannot be empty.');
-      return;
-    }
-
-    let states = await getStates();
-    if (states.some(s => s.name.toLowerCase() === stateName.toLowerCase())) {
-      showAlert('State with this name already exists!');
-      return;
-    }
-
-    const newState = {
-      id: generateUniqueId('STA-'),
-      name: stateName,
-      createdAt: new Date().toISOString()
-    };
-    await saveStatesData(newState);
-    showAlert('State added successfully!');
-    stateNameInput.value = '';
-    await loadStates();
-  });
-
-  async function loadStates() {
-    const stateTableBody = document.getElementById('state-table');
-    stateTableBody.innerHTML = '';
-    const states = await getStates();
-
-    if (states.length === 0) {
-      stateTableBody.innerHTML = '<tr><td colspan="2">No states found</td></tr>';
-      return;
-    }
-
-    states.forEach(state => {
-      const row = stateTableBody.insertRow();
-      row.insertCell(0).textContent = state.name;
-      const actionsCell = row.insertCell(1);
-      actionsCell.innerHTML = `
-        <button onclick="editState('${state.id}', '${state.name}')">Edit</button>
-        <button onclick="deleteState('${state.id}')">Delete</button>
-      `;
-    });
-  }
-
-  async function editState(docId, currentName) {
-    showConfirm(`Edit state name from "${currentName}"?`, async (confirmed) => {
-      if (confirmed) {
-        const newName = prompt('Enter new name for the state:', currentName);
-        if (newName && newName.trim() !== '' && newName.trim().toLowerCase() !== currentName.toLowerCase()) {
-          let states = await getStates();
-          const index = states.findIndex(s => s.id === docId);
-          if (index !== -1) {
-            if (states.some(s => s.name.toLowerCase() === newName.trim().toLowerCase() && s.id !== docId)) {
-              showAlert('State with this new name already exists!');
-              return;
-            }
-            const stateToUpdate = { ...states[index], name: newName.trim() };
-            await saveStatesData(stateToUpdate);
-            showAlert('State updated successfully!');
-            await loadStates();
-
-            let cities = await getCities();
-            cities.forEach(city => {
-              if (city.state_id === docId) {
-                city.state_name = newName.trim();
-                saveCitiesData(city);
-              }
-            });
-          }
-        } else if (newName !== null) {
-          showAlert('State name not changed or invalid.');
-        }
-      }
-    });
-  }
-
-  async function deleteState(docId) {
-    showConfirm('Are you sure you want to delete this state? This will also delete all cities associated with it.', async (confirmed) => {
-      if (confirmed) {
-        try {
-          const { error: stateError } = await supabase.from('states').delete().eq('id', docId);
-          if (stateError) throw stateError;
-          showAlert('State deleted successfully from Supabase!');
-
-          const { error: cityError } = await supabase.from('cities').delete().eq('state_id', docId);
-          if (cityError) throw cityError;
-          showAlert('Associated cities deleted successfully from Supabase!');
-
-          // Update localStorage cache
-          let allStates = localStorage.getItem('states') ? JSON.parse(localStorage.getItem('states')) : [];
-          allStates = allStates.filter(s => s.id !== docId);
-          localStorage.setItem('states', JSON.stringify(allStates));
-
-          let allCities = localStorage.getItem('cities') ? JSON.parse(localStorage.getItem('cities')) : [];
-          allCities = allCities.filter(city => city.state_id !== docId);
-          localStorage.setItem('cities', JSON.stringify(allCities));
-
-        } catch (e) {
-          console.warn('Failed to delete state/cities from Supabase, adding to offline queue:', e.message);
-          let offlineQueue = JSON.parse(localStorage.getItem('offlineStateQueue') || '[]');
-          offlineQueue.push({ action: 'delete', id: docId, table: 'states' });
-          localStorage.setItem('offlineStateQueue', JSON.stringify(offlineQueue));
-
-          let offlineCityQueue = JSON.parse(localStorage.getItem('offlineCityQueue') || '[]');
-          offlineCityQueue.push({ action: 'delete_by_state', state_id: docId, table: 'cities' });
-          localStorage.setItem('offlineCityQueue', JSON.stringify(offlineCityQueue));
-
-          showAlert('Offline: State and associated cities marked for deletion locally, will sync when online.');
-
-          // Optimistically remove from local cache
-          let allStates = localStorage.getItem('states') ? JSON.parse(localStorage.getItem('states')) : [];
-          allStates = allStates.filter(s => s.id !== docId);
-          localStorage.setItem('states', JSON.stringify(allStates));
-
-          let allCities = localStorage.getItem('cities') ? JSON.parse(localStorage.getItem('cities')) : [];
-          allCities = allCities.filter(city => city.state_id !== docId);
-          localStorage.setItem('cities', JSON.stringify(allCities));
-        }
-        await loadStates();
-        await loadCities();
-      }
-    });
-  }
-
-  async function searchState() {
-    const searchTerm = document.getElementById('search-state').value.toLowerCase();
-    const stateTableBody = document.getElementById('state-table');
-    stateTableBody.innerHTML = '';
-    const states = await getStates();
-
-    const filteredStates = states.filter(state =>
-      state.name.toLowerCase().includes(searchTerm)
-    ).sort((a, b) => a.name.localeCompare(b.name));
-
-    if (filteredStates.length === 0) {
-      stateTableBody.innerHTML = '<tr><td colspan="2">No matching states found</td></tr>';
-      return;
-    }
-
-    filteredStates.forEach(state => {
-      const row = stateTableBody.insertRow();
-      row.insertCell(0).textContent = state.name;
-      const actionsCell = row.insertCell(1);
-      actionsCell.innerHTML = `
-        <button onclick="editState('${state.id}', '${state.name}')">Edit</button>
-        <button onclick="deleteState('${state.id}')">Delete</button>
-      `;
-    });
-  }
-
-  // --- City Management ---
-
-  // MODIFIED: getCities now fetches from Supabase first, then localStorage
-  async function getCities() {
-    let cities = [];
-    try {
-      const { data, error } = await supabase
-        .from('cities')
-        .select('*')
-        .order('state_name', { ascending: true })
-        .order('name', { ascending: true });
-      if (error) throw error;
-      cities = data;
-      localStorage.setItem('cities', JSON.stringify(cities));
-    } catch (e) {
-      console.warn('Failed to fetch cities from Supabase, falling back to localStorage:', e.message);
-      cities = localStorage.getItem('cities') ? JSON.parse(localStorage.getItem('cities')) : [];
-    }
-    return cities;
-  }
-
-  // MODIFIED: saveCitiesData now saves to Supabase first, then localStorage
-  async function saveCitiesData(city) {
-    try {
-      const supabaseCity = {
-        id: city.id,
-        state_id: city.stateId || city.state_id,
-        state_name: city.stateName || city.state_name,
-        name: city.name,
-        created_at: city.createdAt || city.created_at
-      };
-      const { data, error } = await supabase.from('cities').upsert([supabaseCity], { onConflict: 'id' });
-      if (error) throw error;
-      console.log('Saved city to Supabase:', data);
-
-      let allCities = localStorage.getItem('cities') ? JSON.parse(localStorage.getItem('cities')) : [];
-      const existingIndex = allCities.findIndex(c => c.id === city.id);
-      if (existingIndex !== -1) {
-        allCities[existingIndex] = city;
-      } else {
-        allCities.push(city);
-      }
-      localStorage.setItem('cities', JSON.stringify(allCities));
-
-    } catch (e) {
-      console.warn('Failed to save city to Supabase, saving to localStorage queue:', e.message);
-      let offlineQueue = JSON.parse(localStorage.getItem('offlineCityQueue') || '[]');
-      offlineQueue.push({ action: 'upsert', record: city });
-      localStorage.setItem('offlineCityQueue', JSON.stringify(offlineQueue));
-
-      let allCities = localStorage.getItem('cities') ? JSON.parse(localStorage.getItem('cities')) : [];
-      const existingIndex = allCities.findIndex(c => c.id === city.id);
-      if (existingIndex !== -1) {
-        allCities[existingIndex] = city;
-      } else {
-        allCities.push(city);
-      }
-      localStorage.setItem('cities', JSON.stringify(allCities));
-      showAlert('Offline: City saved locally, will sync when online.');
-    }
-  }
-
-  async function loadStatesForCitySelect() {
-    const stateSelect = document.getElementById('state-select');
-    stateSelect.innerHTML = '<option value="">-- Select State --</option>';
-    const states = await getStates();
-
-    states.forEach(state => {
-      const option = document.createElement('option');
-      option.value = state.id;
-      option.textContent = state.name;
-      stateSelect.appendChild(option);
-    });
-  }
-
-  document.getElementById('city-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const stateSelect = document.getElementById('state-select');
-    const selectedStateId = stateSelect.value;
-    const selectedStateName = stateSelect.options[stateSelect.selectedIndex].textContent;
-    const cityNameInput = document.getElementById('city-name');
-    const cityName = cityNameInput.value.trim();
-
-    if (!selectedStateId || !cityName) {
-      showAlert('Please select a State and enter a City Name.');
-      return;
-    }
-
-    let cities = await getCities();
-    if (cities.some(c => c.state_id === selectedStateId && c.name.toLowerCase() === cityName.toLowerCase())) {
-      showAlert('City with this name already exists in the selected state!');
-      return;
-    }
-
-    const newCity = {
-      id: generateUniqueId('CTY-'),
-      stateId: selectedStateId,
-      stateName: selectedStateName,
-      name: cityName,
-      createdAt: new Date().toISOString()
-    };
-    await saveCitiesData(newCity);
-    showAlert('City added successfully!');
-    cityNameInput.value = '';
-    stateSelect.value = '';
-    await loadCities();
-  });
-
-  async function loadCities() {
-    const cityTableBody = document.getElementById('city-table');
-    cityTableBody.innerHTML = '';
-    const cities = await getCities();
-
-    if (cities.length === 0) {
-      cityTableBody.innerHTML = '<tr><td colspan="3">No cities found</td></tr>';
-      return;
-    }
-
-    cities.forEach(city => {
-      const row = cityTableBody.insertRow();
-      row.insertCell(0).textContent = city.state_name;
-      row.insertCell(1).textContent = city.name;
-      const actionsCell = row.insertCell(2);
-      actionsCell.innerHTML = `
-        <button onclick="editCity('${city.id}', '${city.state_id}', '${city.name}')">Edit</button>
-        <button onclick="deleteCity('${city.id}')">Delete</button>
-      `;
-    });
-  }
-
-  async function editCity(docId, currentStateId, currentCityName) {
-    showConfirm(`Edit city name from "${currentCityName}"?`, async (confirmed) => {
-      if (confirmed) {
-        const newCityName = prompt('Enter new name for the city:', currentCityName);
-        if (newCityName && newCityName.trim() !== '' && newCityName.trim().toLowerCase() !== currentCityName.toLowerCase()) {
-          let cities = await getCities();
-          const index = cities.findIndex(c => c.id === docId);
-          if (index !== -1) {
-            if (cities.some(c => c.state_id === currentStateId && c.name.toLowerCase() === newCityName.trim().toLowerCase() && c.id !== docId)) {
-              showAlert('City with this new name already exists in the same state!');
-              return;
-            }
-            const cityToUpdate = { ...cities[index], name: newCityName.trim() };
-            await saveCitiesData(cityToUpdate);
-            showAlert('City updated successfully!');
-            await loadCities();
-          }
-        } else if (newCityName !== null) {
-          showAlert('City name not changed or invalid.');
-        }
-      }
-    });
-  }
-
-  async function deleteCity(docId) {
-    showConfirm('Are you sure you want to delete this city?', async (confirmed) => {
-      if (confirmed) {
-        try {
-          const { error } = await supabase.from('cities').delete().eq('id', docId);
-          if (error) throw error;
-          showAlert('City deleted successfully from Supabase!');
-
-          // Update localStorage cache
-          let allCities = localStorage.getItem('cities') ? JSON.parse(localStorage.getItem('cities')) : [];
-          allCities = allCities.filter(c => c.id !== docId);
-          localStorage.setItem('cities', JSON.stringify(allCities));
-
-        } catch (e) {
-          console.warn('Failed to delete city from Supabase, adding to offline queue:', e.message);
-          let offlineQueue = JSON.parse(localStorage.getItem('offlineCityQueue') || '[]');
-          offlineQueue.push({ action: 'delete', id: docId, table: 'cities' });
-          localStorage.setItem('offlineCityQueue', JSON.stringify(offlineQueue));
-          showAlert('Offline: City marked for deletion locally, will sync when online.');
-
-          // Optimistically remove from local cache
-          let allCities = localStorage.getItem('cities') ? JSON.parse(localStorage.getItem('cities')) : [];
-          allCities = allCities.filter(c => c.id !== docId);
-          localStorage.setItem('cities', JSON.stringify(allCities));
-        }
-        await loadCities();
-      }
-    });
-  }
-
-  async function searchCity() {
-    const searchTerm = document.getElementById('search-city').value.toLowerCase();
-    const cityTableBody = document.getElementById('city-table');
-    cityTableBody.innerHTML = '';
-    const cities = await getCities();
-
-    const filteredCities = cities.filter(city =>
-      city.name.toLowerCase().includes(searchTerm) ||
-      city.state_name.toLowerCase().includes(searchTerm)
-    ).sort((a, b) => {
-      const stateCompare = a.state_name.localeCompare(b.state_name);
-      if (stateCompare !== 0) return stateCompare;
-      return a.name.localeCompare(b.name);
-    });
-
-    if (filteredCities.length === 0) {
-      cityTableBody.innerHTML = '<tr><td colspan="3">No matching cities found</td></tr>';
-      return;
-    }
-
-    filteredCities.forEach(city => {
-      const row = cityTableBody.insertRow();
-      row.insertCell(0).textContent = city.state_name;
-      row.insertCell(1).textContent = city.name;
-      const actionsCell = row.insertCell(2);
-      actionsCell.innerHTML = `
-        <button onclick="editCity('${city.id}', '${city.state_id}', '${city.name}')">Edit</button>
-        <button onclick="deleteCity('${city.id}')">Delete</button>
-      `;
-    });
-  }
-
-  // --- User Profile ---
-
-  // MODIFIED: getUserProfile now fetches from Supabase first, then localStorage
-  async function getUserProfile(employeeId = currentEmployeeId) {
-    if (!employeeId) return {};
-    let profile = {};
-    try {
-      const { data, error } = await supabase
-        .from('user_profiles')
-        .select('*')
-        .eq('employee_id', employeeId)
-        .single();
-      if (error && error.code !== 'PGRST116') throw error; // PGRST116 means no rows found
-      if (data) {
-        profile = {
-          employeeId: data.employee_id,
-          name: data.name,
-          mobileNo: data.mobile_no,
-          emailId: data.email_id,
-          password: data.password,
-          photoUrl: data.photo_url
-        };
-        localStorage.setItem(`userProfile_${employeeId}`, JSON.stringify(profile));
-      } else {
-        // If not found in Supabase, try localStorage
-        profile = localStorage.getItem(`userProfile_${employeeId}`) ? JSON.parse(localStorage.getItem(`userProfile_${employeeId}`)) : {};
-      }
-    } catch (e) {
-      console.warn(`Failed to fetch profile for ${employeeId} from Supabase, falling back to localStorage:`, e.message);
-      profile = localStorage.getItem(`userProfile_${employeeId}`) ? JSON.parse(localStorage.getItem(`userProfile_${employeeId}`)) : {};
-    }
-    return profile;
-  }
-
-  // MODIFIED: saveUserProfile now saves to Supabase first, then localStorage
-  async function saveUserProfile(profile) {
-    if (!profile.employeeId) {
-        showAlert('Employee ID is required to save profile.');
-        return;
-    }
-    try {
-      const supabaseProfile = {
-        employee_id: profile.employeeId,
-        name: profile.name,
-        mobile_no: profile.mobileNo,
-        email_id: profile.emailId,
-        password: profile.password,
-        photo_url: profile.photoUrl
-      };
-      const { data, error } = await supabase.from('user_profiles').upsert([supabaseProfile], { onConflict: 'employee_id' });
-      if (error) throw error;
-      console.log('Saved user profile to Supabase:', data);
-      localStorage.setItem(`userProfile_${profile.employeeId}`, JSON.stringify(profile));
-    } catch (e) {
-      console.warn(`Failed to save profile for ${profile.employeeId} to Supabase, saving to localStorage queue:`, e.message);
-      let offlineQueue = JSON.parse(localStorage.getItem('offlineUserProfileQueue') || '[]');
-      offlineQueue.push({ action: 'upsert', record: profile });
-      localStorage.setItem('offlineUserProfileQueue', JSON.stringify(offlineQueue));
-      localStorage.setItem(`userProfile_${profile.employeeId}`, JSON.stringify(profile));
-      showAlert('Offline: Profile saved locally, will sync when online.');
-    }
-  }
-
-  // MODIFIED: getAllUserProfiles now fetches from Supabase first, then localStorage
-  async function getAllUserProfiles() {
-    let profiles = [];
-    try {
-      const { data, error } = await supabase
-        .from('user_profiles')
-        .select('*');
-      if (error) throw error;
-      profiles = data.map(p => ({
-        employeeId: p.employee_id,
-        name: p.name,
-        mobileNo: p.mobile_no,
-        emailId: p.email_id,
-        password: p.password,
-        photoUrl: p.photo_url
-      }));
-      // Cache all profiles to localStorage
-      profiles.forEach(p => localStorage.setItem(`userProfile_${p.employeeId}`, JSON.stringify(p)));
-    } catch (e) {
-      console.warn('Failed to fetch all user profiles from Supabase, falling back to localStorage:', e.message);
-      // Fallback to reading all from localStorage
-      for (let i = 0; i < localStorage.length; i++) {
-          const key = localStorage.key(i);
-          if (key.startsWith('userProfile_')) {
-              profiles.push(JSON.parse(localStorage.getItem(key)));
-          }
-      }
-    }
-    return profiles;
-  }
-
-  async function loadUserProfile() {
-    if (!currentEmployeeId) {
-        showAlert('Please login to view your profile.');
-        return;
-    }
-    const profile = await getUserProfile();
-    document.getElementById('profile-name').value = profile.name || '';
-    document.getElementById('profile-employee-id').value = currentEmployeeId;
-    document.getElementById('profile-mobile-no').value = profile.mobileNo || '';
-    document.getElementById('profile-email-id').value = profile.emailId || '';
-    document.getElementById('profile-password').value = profile.password || '';
-    document.getElementById('profile-preview').src = profile.photoUrl || 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/99a20669-ecb4-4325-a970-491b8dac39a9.png';
-
-    updateSidebarProfile(profile.name, currentEmployeeId, profile.photoUrl);
-  }
-
-  document.getElementById('profile-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (!currentEmployeeId) {
-        showAlert('Please login to save your profile.');
-        return;
-    }
-
-    const name = document.getElementById('profile-name').value;
-    const employeeId = document.getElementById('profile-employee-id').value;
-    const mobileNo = document.getElementById('profile-mobile-no').value;
-    const emailId = document.getElementById('profile-email-id').value;
-    const password = document.getElementById('profile-password').value;
-    const photoFile = document.getElementById('upload-photo').files[0];
-
-    let currentProfile = await getUserProfile(employeeId);
-    let photoUrl = currentProfile.photoUrl || 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/99a20669-ecb4-4325-a970-491b8dac39a9.png';
-
-    if (photoFile) {
-      const reader = new FileReader();
-      reader.onload = async (event) => {
-        photoUrl = event.target.result;
-        const updatedProfile = { employeeId, name, mobileNo, emailId, password, photoUrl };
-        await saveUserProfile(updatedProfile);
-        showAlert('Profile saved successfully!');
-        updateSidebarProfile(name, employeeId, photoUrl);
-      };
-      reader.readAsDataURL(photoFile);
-    } else {
-      const updatedProfile = { employeeId, name, mobileNo, emailId, password, photoUrl };
-      await saveUserProfile(updatedProfile);
-      showAlert('Profile saved successfully!');
-      updateSidebarProfile(name, employeeId, photoUrl);
-    }
-  });
-
-  document.getElementById('upload-photo').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        document.getElementById('profile-preview').src = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
-  });
-
-  async function updateSidebarProfile(name, id, photoUrl) {
-    if (currentUserRole === 'admin') {
-        const profile = await getUserProfile(id);
-        const displayName = profile.name || id.replace('ADM-', '') || "Admin User";
-        document.getElementById('sidebar-employee-name').textContent = displayName;
-        document.getElementById('sidebar-employee-id').textContent = id;
-    } else {
-        document.getElementById('sidebar-employee-name').textContent = name || "Employee Name";
-        document.getElementById('sidebar-employee-id').textContent = id || "EMP-ID";
-    }
-    document.getElementById('sidebar-profile-photo').src = photoUrl || 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b480eacc-40ca-4251-4c52-b6c5587b3aa7.png';
-  }
-
-  // --- Admin Profile Management ---
-  async function loadAdminDetails() {
-      if (currentUserRole !== 'admin') {
-          document.getElementById('admin-details-table').innerHTML = '<tr><td colspan="5">Access Denied</td></tr>';
-          return;
-      }
-
-      const adminTableBody = document.getElementById('admin-details-table');
-      adminTableBody.innerHTML = '';
-
-      const allAdminProfiles = (await getAllUserProfiles()).filter(p => p.employeeId.startsWith('ADM-'));
-
-      if (allAdminProfiles.length === 0) {
-          adminTableBody.innerHTML = '<tr><td colspan="5">No admin profiles found. Please ensure at least one admin logs in to create their profile.</td></tr>';
-          return;
-      }
-
-      allAdminProfiles.forEach(adminProfile => {
-          const row = adminTableBody.insertRow();
-          row.insertCell(0).textContent = adminProfile.employeeId || 'N/A';
-          row.insertCell(1).textContent = adminProfile.name || adminProfile.employeeId.replace('ADM-', '') || 'Admin User';
-          row.insertCell(2).textContent = adminProfile.mobileNo || 'N/A';
-          row.insertCell(3).textContent = adminProfile.emailId || 'N/A';
-          const actionsCell = row.insertCell(4);
-          actionsCell.innerHTML = `
-              <button onclick="adminEditEmployee('${adminProfile.employeeId}')">Edit</button>
-              <button onclick="adminDeleteEmployee('${adminProfile.employeeId}')">Delete</button>
-          `;
-      });
-  }
-
-  // --- Employee Management (Admin Only - for non-admin employees) ---
-  async function loadEmployeeDetails() {
-      if (currentUserRole !== 'admin') {
-          document.getElementById('employee-details-table').innerHTML = '<tr><td colspan="5">Access Denied</td></tr>';
-          return;
-      }
-
-      const employeeTableBody = document.getElementById('employee-details-table');
-      employeeTableBody.innerHTML = '';
-      const allProfiles = await getAllUserProfiles();
-
-      const nonAdminEmployeeProfiles = allProfiles.filter(p => !p.employeeId.startsWith('ADM-'));
-
-      if (nonAdminEmployeeProfiles.length === 0) {
-          employeeTableBody.innerHTML = '<tr><td colspan="5">No employee profiles found.</td></tr>';
-          return;
-      }
-
-      nonAdminEmployeeProfiles.forEach(profile => {
-          const row = employeeTableBody.insertRow();
-          row.insertCell(0).textContent = profile.employeeId || 'N/A';
-          row.insertCell(1).textContent = profile.name || 'N/A';
-          row.insertCell(2).textContent = profile.mobileNo || 'N/A';
-          row.insertCell(3).textContent = profile.emailId || 'N/A';
-          const actionsCell = row.insertCell(4);
-          actionsCell.innerHTML = `
-              <button onclick="adminEditEmployee('${profile.employeeId}')">Edit</button>
-              <button onclick="adminDeleteEmployee('${profile.employeeId}')">Delete</button>
-          `;
-      });
-  }
-
-  async function adminEditEmployee(employeeId) {
-      if (currentUserRole !== 'admin') {
-          showAlert('Access Denied.');
-          return;
-      }
-      const profile = await getUserProfile(employeeId);
-      if (profile) {
-          if (employeeId.startsWith('ADM-')) {
-              const newName = prompt(`Edit name for Admin (${employeeId}):`, profile.name || employeeId.replace('ADM-', ''));
-              if (newName !== null && newName.trim() !== '') {
-                  profile.name = newName.trim();
-                  await saveUserProfile(profile);
-                  showAlert('Admin name updated.');
-              }
-              const newMobile = prompt(`Edit mobile number for Admin (${employeeId}):`, profile.mobileNo);
-              if (newMobile !== null && newMobile.trim() !== '') {
-                  profile.mobileNo = newMobile.trim();
-                  await saveUserProfile(profile);
-                  showAlert('Admin mobile number updated.');
-              }
-              const newEmail = prompt(`Edit email for Admin (${employeeId}):`, profile.emailId);
-              if (newEmail !== null && newEmail.trim() !== '') {
-                  profile.emailId = newEmail.trim();
-                  await saveUserProfile(profile);
-                  showAlert('Admin email updated.');
-              }
-              await loadAdminDetails();
-          } else {
-              const newName = prompt(`Edit name for ${employeeId}:`, profile.name);
-              if (newName !== null && newName.trim() !== '') {
-                  profile.name = newName.trim();
-                  await saveUserProfile(profile);
-                  showAlert('Employee name updated.');
-              }
-
-              const newMobile = prompt(`Edit mobile number for ${employeeId}:`, profile.mobileNo);
-              if (newMobile !== null && newMobile.trim() !== '') {
-                  profile.mobileNo = newMobile.trim();
-                  await saveUserProfile(profile);
-                  showAlert('Employee mobile number updated.');
-              }
-
-              const newEmail = prompt(`Edit email for ${employeeId}:`, profile.emailId);
-              if (newEmail !== null && newEmail.trim() !== '') {
-                  profile.emailId = newEmail.trim();
-                  await saveUserProfile(profile);
-                  showAlert('Employee email updated.');
-              }
-              await loadEmployeeDetails();
-          }
-      } else {
-          showAlert('Profile not found.');
-      }
-  }
-
-  function openAddEmployeeModal() {
-    if (currentUserRole !== 'admin') {
-      showAlert('Only administrators can add new employees');
-      return;
-    }
-    document.getElementById('addEmployeeModal').style.display = 'flex';
-    document.getElementById('add-employee-form').reset();
-  }
-
-  function closeAddEmployeeModal() {
-    document.getElementById('addEmployeeModal').style.display = 'none';
-    document.getElementById('add-employee-form').reset();
-  }
-
-  document.getElementById('add-employee-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const id = document.getElementById('new-employee-id').value.trim().toUpperCase();
-    const name = document.getElementById('new-employee-name').value.trim();
-    const mobile = document.getElementById('new-employee-mobile').value.trim();
-    const email = document.getElementById('new-employee-email').value.trim();
-    const password = document.getElementById('new-employee-password').value;
-
-    if (!/^SCS-\d{5,6}$/.test(id)) {
-      showAlert('Employee ID must be in format SCS- followed by 5 or 6 digits (e.g., SCS-12345 or SCS-123456).');
-      return;
-    }
-
-    const newProfile = {
-      employeeId: id,
-      name: name,
-      mobileNo: mobile,
-      emailId: email,
-      password: password,
-      photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png'
-    };
-
-    const existingProfile = await getUserProfile(id);
-    if (existingProfile && Object.keys(existingProfile).length > 0) {
-      showAlert('An employee with this ID already exists!');
-      return;
-    }
-
-    await saveUserProfile(newProfile);
-    showAlert(`Employee ${id} added successfully!`);
-    closeAddEmployeeModal();
-    await loadEmployeeDetails();
-    await populateEmployeeFilter();
-  });
-
-  // --- Admin Management (Add Admin Modal) ---
-  function openAddAdminModal() {
-    if (currentUserRole !== 'admin') {
-      showAlert('Only administrators can add new admins.');
-      return;
-    }
-    document.getElementById('addAdminModal').style.display = 'flex';
-    document.getElementById('add-admin-form').reset();
-  }
-
-  function closeAddAdminModal() {
-    document.getElementById('addAdminModal').style.display = 'none';
-    document.getElementById('add-admin-form').reset();
-  }
-
-  document.getElementById('add-admin-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const username = document.getElementById('new-admin-username').value.trim().toUpperCase();
-    const name = document.getElementById('new-admin-name').value.trim();
-    const mobile = document.getElementById('new-admin-mobile').value.trim();
-    const email = document.getElementById('new-admin-email').value.trim();
-    const password = document.getElementById('new-admin-password').value;
-
-    if (!/^ADM-[A-Za-z\s]+$/.test(username)) {
-      showAlert('Admin Username must be in format ADM- followed by letters and spaces (e.g., ADM-JohnDoe).');
-      return;
-    }
-
-    if (allowedAdminUsernames.includes(username)) {
-        showAlert('This Admin Username is already pre-defined in the system.');
-        return;
-    }
-
-    const existingProfile = await getUserProfile(username);
-    if (existingProfile && Object.keys(existingProfile).length > 0) {
-      showAlert('An admin with this username already exists!');
-      return;
-    }
-
-    const newAdminProfile = {
-      employeeId: username,
-      name: name,
-      mobileNo: mobile,
-      emailId: email,
-      password: password,
-      photoUrl: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/default-employee.png'
-    };
-
-    await saveUserProfile(newAdminProfile);
-    showAlert(`Admin ${username} added successfully!`);
-    closeAddAdminModal();
-    await loadAdminDetails();
-  });
-
-
-  async function adminDeleteEmployee(employeeId) {
-      if (currentUserRole !== 'admin') {
-          showAlert('Access Denied.');
-          return;
-      }
-      if (employeeId === currentEmployeeId) {
-          showAlert('You cannot delete the currently logged-in Admin profile from this interface.');
-          return;
-      }
-      if (employeeId.startsWith('ADM-') && allowedAdminUsernames.includes(employeeId)) {
-          showAlert('Pre-defined Admin profiles cannot be deleted from this section. They are hardcoded.');
-          return;
-      }
-
-      showConfirm(`Are you sure you want to delete ${employeeId.startsWith('ADM-') ? 'admin' : 'employee'} ${employeeId} and all their associated data (attendance, visits, follow-ups)?`, async (confirmed) => {
-          if (confirmed) {
-              try {
-                  // Delete profile
-                  const { error: profileError } = await supabase.from('user_profiles').delete().eq('employee_id', employeeId);
-                  if (profileError) throw profileError;
-
-                  // Delete daily activities
-                  const { error: activityError } = await supabase.from('daily_activities').delete().eq('employee_id', employeeId);
-                  if (activityError) throw activityError;
-
-                  // Delete follow-ups
-                  const { error: followupError } = await supabase.from('follow_ups').delete().eq('employee_id', employeeId);
-                  if (followupError) throw followupError;
-
-                  showAlert(`${employeeId.startsWith('ADM-') ? 'Admin' : 'Employee'} ${employeeId} and all their data deleted successfully from Supabase!`);
-
-                  // Update localStorage cache
-                  localStorage.removeItem(`userProfile_${employeeId}`);
-                  localStorage.removeItem(`currentCheckInSessionId_${employeeId}`);
-                  let dailyActivityRecords = localStorage.getItem('dailyActivityRecords') ? JSON.parse(localStorage.getItem('dailyActivityRecords')) : [];
-                  dailyActivityRecords = dailyActivityRecords.filter(rec => rec.employeeId !== employeeId);
-                  localStorage.setItem('dailyActivityRecords', JSON.stringify(dailyActivityRecords));
-                  let followUps = localStorage.getItem('followUps') ? JSON.parse(localStorage.getItem('followUps')) : [];
-                  followUps = followUps.filter(rec => rec.employeeId !== employeeId);
-                  localStorage.setItem('followUps', JSON.stringify(followUps));
-
-              } catch (e) {
-                  console.warn(`Failed to delete ${employeeId} from Supabase, adding to offline queue:`, e.message);
-                  let offlineQueue = JSON.parse(localStorage.getItem('offlineDeleteQueue') || '[]');
-                  offlineQueue.push({ action: 'delete_user', employee_id: employeeId });
-                  localStorage.setItem('offlineDeleteQueue', JSON.stringify(offlineQueue));
-                  showAlert(`Offline: ${employeeId.startsWith('ADM-') ? 'Admin' : 'Employee'} ${employeeId} marked for deletion locally, will sync when online.`);
-
-                  // Optimistically remove from local cache
-                  localStorage.removeItem(`userProfile_${employeeId}`);
-                  localStorage.removeItem(`currentCheckInSessionId_${employeeId}`);
-                  let dailyActivityRecords = localStorage.getItem('dailyActivityRecords') ? JSON.parse(localStorage.getItem('dailyActivityRecords')) : [];
-                  dailyActivityRecords = dailyActivityRecords.filter(rec => rec.employeeId !== employeeId);
-                  localStorage.setItem('dailyActivityRecords', JSON.stringify(dailyActivityRecords));
-                  let followUps = localStorage.getItem('followUps') ? JSON.parse(localStorage.getItem('followUps')) : [];
-                  followUps = followUps.filter(rec => rec.employeeId !== employeeId);
-                  localStorage.setItem('followUps', JSON.stringify(followUps));
-              }
-
-              if (employeeId.startsWith('ADM-')) {
-                  await loadAdminDetails();
-              } else {
-                  await loadEmployeeDetails();
-                  await populateEmployeeFilter();
-              }
-          }
-      });
-  }
-
-  // --- Supabase Integration (Primary Storage) ---
-  const supabaseUrl = 'https://smoapnooceqbreclhrka.supabase.co';
-  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNtb2Fwbm9vY2VxYnJlY2xocmthIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNTYxMjIsImexCjIwNjY5MzIxMjJ9.FtXxRLdeBlSD5LZCsxMKUd0mFlS1HFcqA0g-ZG9suz8';
-  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
-
-  // --- Offline Queue Processing ---
-  async function processOfflineQueue() {
-      console.log('Attempting to process offline queues...');
-
-      // User Profiles
-      let userProfileQueue = JSON.parse(localStorage.getItem('offlineUserProfileQueue') || '[]');
-      for (let i = 0; i < userProfileQueue.length; i++) {
-          const item = userProfileQueue[i];
-          if (item.action === 'upsert') {
-              try {
-                  const supabaseProfile = {
-                      employee_id: item.record.employeeId,
-                      name: item.record.name,
-                      mobile_no: item.record.mobileNo,
-                      email_id: item.record.emailId,
-                      password: item.record.password,
-                      photo_url: item.record.photoUrl
-                  };
-                  const { error } = await supabase.from('user_profiles').upsert([supabaseProfile], { onConflict: 'employee_id' });
-                  if (error) throw error;
-                  userProfileQueue.splice(i, 1);
-                  i--;
-                  console.log('Synced offline user profile:', item.record.employeeId);
-              } catch (e) {
-                  console.error('Failed to sync offline user profile:', e.message);
-              }
-          }
-      }
-      localStorage.setItem('offlineUserProfileQueue', JSON.stringify(userProfileQueue));
-
-      // Daily Activities
-      let dailyActivityQueue = JSON.parse(localStorage.getItem('offlineDailyActivityQueue') || '[]');
-      for (let i = 0; i < dailyActivityQueue.length; i++) {
-          const item = dailyActivityQueue[i];
-          if (item.action === 'upsert') {
-              try {
-                  const supabaseRecord = {
-                      id: item.record.id,
-                      employee_id: item.record.employeeId,
-                      name: (await getUserProfile(item.record.employeeId))?.name || '',
-                      type: item.record.type,
-                      timestamp: item.record.timestamp,
-                      location: typeof item.record.location === 'object' ? item.record.location.address : item.record.location,
-                      latitude: item.record.location?.lat?.toString() || null,
-                      longitude: item.record.location?.lng?.toString() || null,
-                      map_link: item.record.mapLink || null,
-                      details: item.record.details,
-                      linked_check_in_id: item.record.linkedCheckInId || null,
-                      check_out_id: item.record.checkOutId || null
-                  };
-                  const { error } = await supabase.from('daily_activities').upsert([supabaseRecord], { onConflict: 'id' });
-                  if (error) throw error;
-                  dailyActivityQueue.splice(i, 1);
-                  i--;
-                  console.log('Synced offline daily activity:', item.record.id);
-              } catch (e) {
-                  console.error('Failed to sync offline daily activity:', e.message);
-              }
-          }
-      }
-      localStorage.setItem('offlineDailyActivityQueue', JSON.stringify(dailyActivityQueue));
-
-      // Follow Ups
-      let followUpQueue = JSON.parse(localStorage.getItem('offlineFollowUpQueue') || '[]');
-      for (let i = 0; i < followUpQueue.length; i++) {
-          const item = followUpQueue[i];
-          if (item.action === 'upsert') {
-              try {
-                  const supabaseFollowup = {
-                      id: item.record.id,
-                      employee_id: item.record.employeeId,
-                      name: (await getUserProfile(item.record.employeeId))?.name || '',
-                      subject: item.record.subject,
-                      datetime: item.record.datetime,
-                      note: item.record.note,
-                      created_at: item.record.createdAt
-                  };
-                  const { error } = await supabase.from('follow_ups').upsert([supabaseFollowup], { onConflict: 'id' });
-                  if (error) throw error;
-                  followUpQueue.splice(i, 1);
-                  i--;
-                  console.log('Synced offline follow-up:', item.record.id);
-              } catch (e) {
-                  console.error('Failed to sync offline follow-up:', e.message);
-              }
-          } else if (item.action === 'delete') {
-              try {
-                  const { error } = await supabase.from('follow_ups').delete().eq('id', item.id);
-                  if (error) throw error;
-                  followUpQueue.splice(i, 1);
-                  i--;
-                  console.log('Synced offline follow-up deletion:', item.id);
-              } catch (e) {
-                  console.error('Failed to sync offline follow-up deletion:', e.message);
-              }
-          }
-      }
-      localStorage.setItem('offlineFollowUpQueue', JSON.stringify(followUpQueue));
-
-      // States
-      let stateQueue = JSON.parse(localStorage.getItem('offlineStateQueue') || '[]');
-      for (let i = 0; i < stateQueue.length; i++) {
-          const item = stateQueue[i];
-          if (item.action === 'upsert') {
-              try {
-                  const supabaseState = {
-                      id: item.record.id,
-                      name: item.record.name,
-                      created_at: item.record.createdAt
-                  };
-                  const { error } = await supabase.from('states').upsert([supabaseState], { onConflict: 'id' });
-                  if (error) throw error;
-                  stateQueue.splice(i, 1);
-                  i--;
-                  console.log('Synced offline state:', item.record.id);
-              } catch (e) {
-                  console.error('Failed to sync offline state:', e.message);
-              }
-          } else if (item.action === 'delete') {
-              try {
-                  const { error } = await supabase.from('states').delete().eq('id', item.id);
-                  if (error) throw error;
-                  stateQueue.splice(i, 1);
-                  i--;
-                  console.log('Synced offline state deletion:', item.id);
-              } catch (e) {
-                  console.error('Failed to sync offline state deletion:', e.message);
-              }
-          }
-      }
-      localStorage.setItem('offlineStateQueue', JSON.stringify(stateQueue));
-
-      // Cities
-      let cityQueue = JSON.parse(localStorage.getItem('offlineCityQueue') || '[]');
-      for (let i = 0; i < cityQueue.length; i++) {
-          const item = cityQueue[i];
-          if (item.action === 'upsert') {
-              try {
-                  const supabaseCity = {
-                      id: item.record.id,
-                      state_id: item.record.stateId || item.record.state_id,
-                      state_name: item.record.stateName || item.record.state_name,
-                      name: item.record.name,
-                      created_at: item.record.createdAt || item.record.created_at
-                  };
-                  const { error } = await supabase.from('cities').upsert([supabaseCity], { onConflict: 'id' });
-                  if (error) throw error;
-                  cityQueue.splice(i, 1);
-                  i--;
-                  console.log('Synced offline city:', item.record.id);
-              } catch (e) {
-                  console.error('Failed to sync offline city:', e.message);
-              }
-          } else if (item.action === 'delete') {
-              try {
-                  const { error } = await supabase.from('cities').delete().eq('id', item.id);
-                  if (error) throw error;
-                  cityQueue.splice(i, 1);
-                  i--;
-                  console.log('Synced offline city deletion:', item.id);
-              } catch (e) {
-                  console.error('Failed to sync offline city deletion:', e.message);
-              }
-          } else if (item.action === 'delete_by_state') {
-              try {
-                  const { error } = await supabase.from('cities').delete().eq('state_id', item.state_id);
-                  if (error) throw error;
-                  cityQueue.splice(i, 1);
-                  i--;
-                  console.log('Synced offline cities by state deletion:', item.state_id);
-              } catch (e) {
-                  console.error('Failed to sync offline cities by state deletion:', e.message);
-              }
-          }
-      }
-      localStorage.setItem('offlineCityQueue', JSON.stringify(cityQueue));
-
-      // User Delete Queue
-      let deleteUserQueue = JSON.parse(localStorage.getItem('offlineDeleteQueue') || '[]');
-      for (let i = 0; i < deleteUserQueue.length; i++) {
-          const item = deleteUserQueue[i];
-          if (item.action === 'delete_user') {
-              try {
-                  await supabase.from('user_profiles').delete().eq('employee_id', item.employee_id);
-                  await supabase.from('daily_activities').delete().eq('employee_id', item.employee_id);
-                  await supabase.from('follow_ups').delete().eq('employee_id', item.employee_id);
-                  deleteUserQueue.splice(i, 1);
-                  i--;
-                  console.log('Synced offline user deletion:', item.employee_id);
-              } catch (e) {
-                  console.error('Failed to sync offline user deletion:', e.message);
-              }
-          }
-      }
-      localStorage.setItem('offlineDeleteQueue', JSON.stringify(deleteUserQueue));
-
-      // After processing, refresh UI if needed
-      if (currentUserRole) {
-          if (document.getElementById('daily-activity').classList.contains('active')) await loadDailyActivity();
-          if (document.getElementById('followups').classList.contains('active')) await loadFollowUps();
-          if (document.getElementById('state').classList.contains('active')) await loadStates();
-          if (document.getElementById('city').classList.contains('active')) await loadCities();
-          if (document.getElementById('profile').classList.contains('active')) await loadUserProfile();
-          if (document.getElementById('employee-management').classList.contains('active')) await loadEmployeeDetails();
-          if (document.getElementById('admin-profile').classList.contains('active')) await loadAdminDetails();
-      }
-  }
-
-  // Listen for online/offline events to trigger queue processing
-  window.addEventListener('online', processOfflineQueue);
-  window.addEventListener('load', processOfflineQueue);
-
+});
 </script>
-
 </body>
 </html>
